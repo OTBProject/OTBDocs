@@ -20,7 +20,7 @@ layout: markdown
 	- [Sample File](#sample-account-configuration-file)
 	- [Fields](#fields)
 - [General Config](#general-config)
- 	- [Path](#path-1)
+	- [Path](#path-1)
 	- [Sample File](#sample-general-configuration-file)
 	- [Fields](#fields-1)
 - [Bot Config](#bot-config)
