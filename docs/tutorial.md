@@ -74,7 +74,7 @@ For example, the whitelist might look like the following:
 
 At this point, you should be able to run the program and have the bot run smoothly. You can find more information about commands that come with the bot and how to add custom commands in the [chat documentation](chat-documentation.html).
 
-If you have any questions about the bot, feel free to leave them in the [issue tracker](../../../issues), or tweet at us <a href="https://twitter.com/OTBProject" target="_blank">@OTBProject</a>. Please use the issue tracker to report bugs or request features (140 characters really isn't enough).
+If you have any questions about the bot, feel free to leave them in the <a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">issue tracker</a>, or tweet at us <a href="https://twitter.com/OTBProject" target="_blank">@OTBProject</a>. Please use the issue tracker to report bugs or request features (140 characters really isn't enough).
 
 ### Other Notes
 
