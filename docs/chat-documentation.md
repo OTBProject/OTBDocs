@@ -30,9 +30,12 @@ layout: markdown
 
 ## Version
 
-Version 0.2.0
+Version 0.4.0
 
 ### Changelog
+* 0.4.0
+  - Release 1.1.3
+  - Added '[[bot]]' term
 * 0.3.0
   - Release 1.1.1
   - Added more special terms
