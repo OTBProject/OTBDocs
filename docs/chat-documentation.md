@@ -218,7 +218,7 @@ Because script commands can have multiple outcomes, they send responses to chat 
 
 ## Special Terms
 
-There are some special terms which can be used when creating a command to create a response which varies depending on how the command is run. Each special term is replaced by some value, as described in the following table. Some examples of special term usage are shown at the end of the section.
+There are some special terms which can be used when creating a command to create a response which varies depending on how the command is run. Each special term is replaced by some value, as described in the following table. Some examples of special term usage are shown at the end of the section.
 
 ### Terms
 
@@ -233,6 +233,7 @@ There are some special terms which can be used when creating a command to create
 |`[[count]]`|The number of times the command has been run since it was created or since it was last modified.|
 |`[[quote]]` or `[[quote{{id}}]]`|A random quote from the quote database if no ID is given. If an ID is given, the quote with the specified ID (if it exists; an empty string if it does not exist or the ID is invalid).|
 |`[[service]]`|The name of the service the bot is connected to ("Twitch" or "Beam").|
+|`[[bot]]`|The bot's username.|
 |`[[game]]`|The name of the game being played (as listed above the stream). Not yet implemented.|
 
 ### Modifiers
