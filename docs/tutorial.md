@@ -40,7 +40,7 @@ After this point, all paths will be denoted within the `.otbproject` installatio
 
 ### Setting Your Account Information
 
-To set your account information, you need to modify the account configuration file. Depending what service you are using, you can find the account configuration file at `.otbproject/config/account-twitch.json` or `.otbproject/config/account-beam.json`. You can edit the file in any text editor (Notepad on Windows, for example). Set your username and passkey in the file, preferably while the bot is not running, and save the file. Your passkey is an oauth token for Twitch, and your password for Beam. When you next run the bot, it will use that username and passkey to connect to Twitch or Beam. See the [config documentation](config-documentation.html#account) for more information about accounts.
+To set your account information, you need to modify the account configuration file. Depending what service you are using, you can find the account configuration file at `.otbproject/config/account-twitch.json` or `.otbproject/config/account-beam.json`. You can edit the file in any text editor (Notepad on Windows, for example). Set your username and passkey in the file, preferably while the bot is not running, and save the file. Your passkey is an <a href="http://twitchapps.com/tmi/" target="_blank">oauth token</a> for Twitch, and your password for Beam. When you next run the bot, it will use that username and passkey to connect to Twitch or Beam. See the [config documentation](config-documentation.html#account) for more information about accounts.
 
 ### Changing the Service
 
