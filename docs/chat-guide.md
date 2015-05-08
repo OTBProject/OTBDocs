@@ -99,6 +99,8 @@ The following is a list of valid markers which can be used with the `--ul=<user 
 
 #### Minimum Number of Arguments for a Command
 
+What are arguments? Arguments (sometimes referred to as parameters) are words following the command. For example, if you run a command `!example these are some arguments`, then you ran the command with four arguments: `these`, `are`, `some`, and `arguments`.
 
+Why would you want to have a minimum number of arguments for a command though?
 
 {% endraw %}
