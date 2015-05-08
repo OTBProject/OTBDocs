@@ -84,7 +84,7 @@ What's a flag? A flag is something you add to the command in order to specify mo
 
 #### Minimum User Level for a Command
 
-The flag to assign a minimum user level for a command is `--ul=<user level>`. For example, suppose you only want moderators (or people with a higher user level) to be able to run your `!example` command. You could add it by typing `!command add --ul=mod !example This is an example command` in chat.
+The flag to assign a minimum user level for a command is `--ul=<user level>` (`ul` for "user level"). For example, suppose you only want moderators (or people with a higher user level) to be able to run your `!example` command. You could add it by typing `!command add --ul=mod !example This is an example command` in chat.
 
 The following is a list of valid markers which can be used with the `--ul=<user level>` flag in place of `<user level>`. If you are confused as to what some of the user levels listed are, don't worry; they will be explained later.
 
@@ -101,6 +101,8 @@ The following is a list of valid markers which can be used with the `--ul=<user 
 
 What are arguments? Arguments (sometimes referred to as parameters) are words following the command. For example, if you run a command `!example these are some arguments`, then you ran the command with four arguments: `these`, `are`, `some`, and `arguments`.
 
-Why would you want to have a minimum number of arguments for a command though?
+Why would you want to have a minimum number of arguments for a command though? Well suppose you have a command which creates a multi-stream link. It wouldn't really make any sense to run the command without specifying some other stream to put in the multi-stream link, so you might want to require at least one argument to specify someone you're streaming with.
+
+So how would you specify a minimum number of arguments? With the flag `--ma=<number>` (`ma` for "minimum arguments").
 
 {% endraw %}
