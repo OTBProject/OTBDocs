@@ -14,6 +14,18 @@ layout: markdown
 - [Version](#version)
   - [Changelog](#changelog)
 - [Background](#background)
+  - [What are Commands?](#what-are-commands)
+  - [What are Aliases?](#what-are-aliases)
+- [Commands](#commands)
+  - [Custom Commands](#custom-commands)
+    - [Adding a Command](#adding-a-command)
+    - [Setting a Command](#setting-a-command)
+  - [Restrictions on Commands (and How to Use Flags)](#restrictions-on-commands-and-how-to-use-flags)
+    - [Minimum User Level for a Command](#minimum-user-level-for-a-command)
+    - [Minimum Number of Arguments for a Command](#minimum-number-of-arguments-for-a-command)
+  - [Deleting a Command](#deleting-a-command)
+  - [Disabling and Enabling Commands](#disabling-and-enabling-commands)
+  - [Renaming Commands](#renaming-commands)
 
 ## Version
 
@@ -42,7 +54,7 @@ The built-in commands for OTBProject tend to have a lot of aliases in order to b
 
 ## Commands
 
-The main command for creating, deleting, modifying, and listing commands is `!command`. To avoid some confusions I've experienced with other bots, `!commands` is aliased to `!command`; that is to say, anywhere where a command is given as `!command <something>`, you can instead type `!commands <something>`.
+The main command for creating, deleting, modifying, and listing commands is `!command`. To avoid some confusions I've experienced with other bots, `!commands` is aliased to `!command`; that is to say, anywhere where a command is given as `!command <something>`, you can instead type `!commands <something>`.
 
 ### Custom Commands
 
@@ -78,7 +90,7 @@ For reference, the aliases used there are:
 * `!editcom='!command set'`
 * `!commands='!command'`
 
-### Restrictions on Commands (and Flags)
+### Restrictions on Commands (and How to Use Flags)
 
 You may be wondering at this point how you can make it so that only a moderator can run a command. Or maybe also subscribers? I will discuss how asign a minimum user level to run a command here, though descriptions of all of the user levels will come a bit later.
 
