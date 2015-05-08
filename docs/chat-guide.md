@@ -24,15 +24,15 @@ There are a few terms which will be useful to understand before discussing how t
 
 ### What are Commands?
 
-Commands are words which the bot will respond to if they are the first word in a message. Commands often start with an exclamation mark, such as `!example`, but they can be any string of characters without a space in them.
+A command is a word which the bot will respond to if it is the first word in a message. Commands often start with an exclamation mark, such as `!example`, but they can be any string of characters without a space in them.
 
 ### What are Aliases?
 
 An alias is a word which represents another word or group of words. Like commands, aliases are only processed by the bot if they are the first word of a message. However, an alias can expand into a command and parameters (other text after the command) for the command, to make running certain commands easier. If an alias expands to something which is not a command or another alias, it won't do anything.
 
-For example, `!addcom` is said to be "aliased" to `!command add` because if you type `!addcom !example example response`, `!addcom` will be replaced by `!command add`, making it as if you had typed `!command add !example example response`. An alias will sometimes be denoted as `<alias>='<expansion>'`. In this example, `!addcom='!command add'`.
+For example, `!addcom` is said to be "aliased" to `!command add` because if you type `!addcom !example example response`, `!addcom` will be replaced (during processing) by `!command add`, making it as if you had typed `!command add !example example response`. An alias will sometimes be denoted as `<alias>='<expansion>'`. In this example, `!addcom='!command add'`.
 
-A given alias will not be processed more than once per message. What does that mean? Suppose you have two aliases, `!alias-1='!alias-2 and then some parameters'` and `!alias-2='!alias-1'`. If someone types `!alias-1` in chat and the bot processes it, it will replace `!alias-1` with `!alias-2 and then some parameters`, and then in turn replace that with `!alias-1 and then some parameters`. However, it will stop there, and will not replace `!alias-1` with its corresponding text again in that message. If `!alias-1` is also a command, it will be run; otherwise, nothing will happen.
+A given alias will not be processed more than once per message. What does that mean? Suppose you have two aliases, `!alias-1='!alias-2 and then some text'` and `!alias-2='!alias-1'`. If someone types `!alias-1` in chat and the bot processes it, it will replace `!alias-1` with `!alias-2 and then some text`, and then in turn replace that with `!alias-1 and then some text`. However, it will stop there, and will not replace `!alias-1` with its corresponding text again in that message. If `!alias-1` is also a command, it will be run; otherwise, nothing will happen.
 
 The built-in commands for OTBProject tend to have a lot of aliases in order to be easily usable by people already familiar with the commands from other bots, and to avoid certain confusions of other bots.
 
