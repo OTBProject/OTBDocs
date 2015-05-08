@@ -127,6 +127,26 @@ For reference, the aliases used there are:
 
 ### Disabling and Enabling Commands
 
+You can prevent the bot from responding to a command without deleting it by instead disabling it. A command can easily be disabled by running the command `!command disable <command name>`. For example, to disable the `!example` command, you would type `!command disable !example` in chat.
 
+Other ways of disabling a command are:
+* `!disable <command name>`
+* `!commands disable <command name>`
+
+For reference, the aliases used there are:
+* `!disable='!command disable'`
+* `!commands='!command'`
+
+You can enable a command again with the command `!command enable <command name>`.
+
+Other ways of enabling a command are:
+* `!enable <command name>`
+* `!commands enable <command name>`
+
+For reference, the aliases used there are:
+* `!enable='!command enable'`
+* `!commands='!command'`
+
+### Renaming Commands
 
 {% endraw %}
