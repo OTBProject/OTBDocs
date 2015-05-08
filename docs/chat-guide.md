@@ -103,6 +103,10 @@ What are arguments? Arguments (sometimes referred to as parameters) are words fo
 
 Why would you want to have a minimum number of arguments for a command though? Well suppose you have a command which creates a multi-stream link. It wouldn't really make any sense to run the command without specifying some other stream to put in the multi-stream link, so you might want to require at least one argument to specify someone you're streaming with.
 
-So how would you specify a minimum number of arguments? With the flag `--ma=<number>` (`ma` for "minimum arguments").
+So how would you specify a minimum number of arguments? With the flag `--ma=<number>` (`ma` for "minimum arguments"). `<number>` must be a non-negative whole number (0 or higher). If you wanted to require the `!example` command to be run with at least two arguments in order to respond, you would could add it with the command `!command add --ma=2 !example This is an example command`.
+
+### Deleting a Command
+
+
 
 {% endraw %}
