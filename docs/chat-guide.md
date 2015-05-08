@@ -11,6 +11,10 @@ layout: markdown
 
 ## Table of Contents
 
+- [Version](#version)
+  - [Changelog](#changelog)
+- [Background](#background)
+
 ## Version
 
 Version 1.0 [WIP]
