@@ -26,6 +26,7 @@ layout: markdown
   - [Deleting a Command](#deleting-a-command)
   - [Disabling and Enabling Commands](#disabling-and-enabling-commands)
   - [Renaming Commands](#renaming-commands)
+  - [Changing the Minimum User Level](#changing-the-minimum-user-level)
 
 ## Version
 
@@ -40,11 +41,11 @@ There are a few terms which will be useful to understand before discussing how t
 
 ### What are Commands?
 
-A command is a word which the bot will respond to if it is the first word in a message. Commands often start with an exclamation mark, such as `!example`, but they can be any string of characters without a space in them.
+A command is a word which the bot will respond to if it is the first word in a message. Commands often start with an exclamation mark, such as `!example`, but they can be any string of characters without a space in them. Commands are not case sensitive, so `!ExaMPle` is equivalent to `!example`.
 
 ### What are Aliases?
 
-An alias is a word which represents another word or group of words. Like commands, aliases are only processed by the bot if they are the first word of a message. However, an alias can expand into a command and parameters (other text after the command) for the command, to make running certain commands easier. If an alias expands to something which is not a command or another alias, it won't do anything.
+An alias is a word which represents another word or group of words. Like commands, aliases are only processed by the bot if they are the first word of a message. However, an alias can expand into a command and parameters (other text after the command) for the command, to make running certain commands easier. If an alias expands to something which is not a command or another alias, it won't do anything. Like commands, aliases are not case sensitive.
 
 For example, `!addcom` is said to be "aliased" to `!command add` because if you type `!addcom !example example response`, `!addcom` will be replaced (during processing) by `!command add`, making it as if you had typed `!command add !example example response`. An alias will sometimes be denoted as `<alias>='<expansion>'`. In this example, `!addcom='!command add'`.
 
@@ -96,7 +97,7 @@ You may be wondering at this point how you can make it so that only a moderator 
 
 There are two ways in which you can restrict how a command is run, and both are specified using flags in the `!command add` or `!command set` commands (or in any equivalent commands such as `!setcom`).
 
-What's a flag? A flag is something you add to the command in order to specify more information about how you want the command to be set. Flags start with `--`. For example, you might type `!command set --<flag> <command name> <response>` (don't worry, it will become more clear in a moment). Flags are optional, and if multiple are present, their order does not matter.
+What's a flag? A flag is something you add to the command in order to specify more information about how you want the command to be set. Flags start with `--`. For example, you might type `!command set --<flag> <command name> <response>` (don't worry, it will become more clear in a moment). Flags are optional, and if multiple are present, their order does not matter.
 
 #### Minimum User Level for a Command
 
@@ -164,5 +165,11 @@ For reference, the aliases used there are:
 * `!commands='!command'`
 
 ### Renaming Commands
+
+To rename a command, you don't need to delete it and re-add it with a new name. You can just use the command `!rename <old command name> <new command name>` (as long as a command with the name `<new command name>` does not already exist).
+
+For example, suppose you want to rename the previously mentioned command `!example` to `!overused-example`. You would type `!rename !example !overused-example` in chat, and the bot would then respond to `!overused-example` and not `!example`.
+
+### Changing the Minimum User Level
 
 {% endraw %}
