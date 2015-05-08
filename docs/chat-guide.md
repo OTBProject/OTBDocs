@@ -55,7 +55,7 @@ The built-in commands for OTBProject tend to have a lot of aliases in order to b
 
 ## Commands
 
-The main command for creating, deleting, modifying, and listing commands is `!command`. To avoid some confusions I've experienced with other bots, `!commands` is aliased to `!command`; that is to say, anywhere where a command is given as `!command <something>`, you can instead type `!commands <something>`.
+The main command for creating, deleting, modifying, and listing commands is `!command`. To avoid some confusions I've experienced with other bots, `!commands` is aliased to `!command`; that is to say, anywhere where a command is given as `!command <something>`, you can instead type `!commands <something>`.
 
 ### Custom Commands
 
