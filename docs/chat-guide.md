@@ -105,7 +105,27 @@ Why would you want to have a minimum number of arguments for a command though? W
 
 So how would you specify a minimum number of arguments? With the flag `--ma=<number>` (`ma` for "minimum arguments"). `<number>` must be a non-negative whole number (0 or higher). If you wanted to require the `!example` command to be run with at least two arguments in order to respond, you would could add it with the command `!command add --ma=2 !example This is an example command`.
 
+If you wanted `!example` to have a minimum user level of moderator and require at least 2 arguments, you could create it with `!command add --ul=mod --ma=2 !example This is an example command` or `!command add --ma=2 --ul=mod !example This is an example command` (or use any variant of `!command add`, such as `!addcom`).
+
 ### Deleting a Command
+
+A command can be removed by typing `!command delete <command name>`.
+
+Other ways of deleting a command are:
+* `!command remove <command name>`
+* `!command del <command name>`
+* `!command rm <command name>`
+* `!delcom <command name>`
+* `!commands delete <command name>`
+* `!commands remove <command name>`
+* `!commands del <command name>`
+* `!commands rm <command name>`
+
+For reference, the aliases used there are:
+* `!delcom='!command delete'`
+* `!commands='!command'`
+
+### Disabling and Enabling Commands
 
 
 
