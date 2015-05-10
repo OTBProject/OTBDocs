@@ -166,7 +166,7 @@ For reference, the aliases used there are:
 
 ### Renaming Commands
 
-To rename a command, you don't need to delete it and re-add it with a new name. You can just use the command `!rename <old command name> <new command name>` (as long as a command with the name `<new command name>` does not already exist).
+To rename a command, you don't need to delete it and re-add it with a new name. You can just use the command `!rename <old command name> <new command name>` (as long as a command with the new name does not already exist).
 
 For example, suppose you want to rename the previously mentioned command `!example` to `!overused-example`. You would type `!rename !example !overused-example` in chat, and the bot would then respond to `!overused-example` and not `!example`.
 
