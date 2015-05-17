@@ -83,30 +83,30 @@ There are two ways to add a command: you can add the new command only if it does
 The basic way of adding a command is `!command add <command name> <response>`. For example, suppose you want to add a command `!example`, for which the response is `This is an example command`. You would type `!command add !example This is an example command` in chat, and the bot would add the new command `!example`. As mentioned previously, `<command name>` cannot contain any spaces.
 
 Other ways of adding a command (some of which you may be familiar with from other bots) are:
-* `!command new <command name> <response>`
-* `!addcom <command name> <response>`
-* `!commands add <command name> <response>`
-* `!commands new <command name> <response>`
+- `!command new <command name> <response>`
+- `!addcom <command name> <response>`
+- `!commands add <command name> <response>`
+- `!commands new <command name> <response>`
 
 For reference, the aliases used there are:
-* `!addcom='!command add'`
-* `!commands='!command'`
+- `!addcom='!command add'`
+- `!commands='!command'`
 
 #### Setting a Command
 
 Similar to adding a command, you would type `!command set <command name> <response>` to set a command. If there was already a command with the specified name, it gets overwritten.
 
 Other ways of setting a command are:
-* `!command edit <command name> <response>`
-* `!setcom <command name> <response>`
-* `!editcom <command name> <response>`
-* `!commands set <command name> <response>`
-* `!commands edit <command name> <response>`
+- `!command edit <command name> <response>`
+- `!setcom <command name> <response>`
+- `!editcom <command name> <response>`
+- `!commands set <command name> <response>`
+- `!commands edit <command name> <response>`
 
 For reference, the aliases used there are:
-* `!setcom='!command set'`
-* `!editcom='!command set'`
-* `!commands='!command'`
+- `!setcom='!command set'`
+- `!editcom='!command set'`
+- `!commands='!command'`
 
 ### Restrictions on Commands (and How to Use Flags)
 
@@ -146,40 +146,40 @@ If you wanted `!example` to have a minimum user level of moderator and require a
 A command can be removed by typing `!command delete <command name>`.
 
 Other ways of deleting a command are:
-* `!command remove <command name>`
-* `!command del <command name>`
-* `!command rm <command name>`
-* `!delcom <command name>`
-* `!commands delete <command name>`
-* `!commands remove <command name>`
-* `!commands del <command name>`
-* `!commands rm <command name>`
+- `!command remove <command name>`
+- `!command del <command name>`
+- `!command rm <command name>`
+- `!delcom <command name>`
+- `!commands delete <command name>`
+- `!commands remove <command name>`
+- `!commands del <command name>`
+- `!commands rm <command name>`
 
 For reference, the aliases used there are:
-* `!delcom='!command delete'`
-* `!commands='!command'`
+- `!delcom='!command delete'`
+- `!commands='!command'`
 
 ### Disabling and Enabling Commands
 
 You can prevent the bot from responding to a command without deleting it by instead disabling it. A command can easily be disabled by running the command `!command disable <command name>`. For example, to disable the `!example` command, you would type `!command disable !example` in chat.
 
 Other ways of disabling a command are:
-* `!disable <command name>`
-* `!commands disable <command name>`
+- `!disable <command name>`
+- `!commands disable <command name>`
 
 For reference, the aliases used there are:
-* `!disable='!command disable'`
-* `!commands='!command'`
+- `!disable='!command disable'`
+- `!commands='!command'`
 
 You can enable a command again with the command `!command enable <command name>`.
 
 Other ways of enabling a command are:
-* `!enable <command name>`
-* `!commands enable <command name>`
+- `!enable <command name>`
+- `!commands enable <command name>`
 
 For reference, the aliases used there are:
-* `!enable='!command enable'`
-* `!commands='!command'`
+- `!enable='!command enable'`
+- `!commands='!command'`
 
 ### Renaming Commands
 
@@ -206,10 +206,10 @@ The bot stores the number of times each command has been run. While changing the
 To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained later.)
 
 Another way of listing commands is:
-* `!commands list`
+- `!commands list`
 
 For reference, the alias used there is:
-* `!commands='!command'`
+- `!commands='!command'`
 
 ### Getting the Raw Response of a Command
 
@@ -218,10 +218,10 @@ You may want to get the raw response of a command if you discover a typo or deci
 To get the raw response for a command, use the command `!command raw <command name>`.
 
 Another way of getting the raw response for a command is:
-* `!commands raw <command name>`
+- `!commands raw <command name>`
 
 For reference, the alias used there is:
-* `!commands='!command'`
+- `!commands='!command'`
 
 ## Aliases
 
@@ -232,10 +232,10 @@ The main command for working with aliases is `!alias-meta`. You may say, "That's
 To create an alias, use the command `!alias <alias name> <command>`. `<alias name>` must not contain spaces, but `<command>` may. If an alias with the specified name already exists, it is overwritten. For example, to create the already-mentioned `!addcom` alias (which is built-in and does not need to be added manually), you might run the command `!alias !addcom !command add`.
 
 Another way of creating an alias is:
-* `!alias-meta set <alias name> <command>`
+- `!alias-meta set <alias name> <command>`
 
 For reference, the alias used there is:
-* `!alias='!alias-meta set'`
+- `!alias='!alias-meta set'`
 
 If you wish to add an alias only if an alias with the specified name does not exist, you can use the command `!alias-meta add <alias name> <command>` or `!alias-meta new <alias name> <command>`.
 
@@ -244,23 +244,23 @@ If you wish to add an alias only if an alias with the specified name does not ex
 To delete an alias, use the command `!unalias <alias name>`. For example, to remove the `!addcom` alias, you would run the command `!unalias !addcom`.
 
 Other ways of deleting an alias are:
-* `!alias-meta delete <alias name>`
-* `!alias-meta remove <alias name>`
-* `!alias-meta del <alias name>`
-* `!alias-meta rm <alias name>`
+- `!alias-meta delete <alias name>`
+- `!alias-meta remove <alias name>`
+- `!alias-meta del <alias name>`
+- `!alias-meta rm <alias name>`
 
 For reference, the alias used there is:
-* `!unalias='!alias-meta delete'`
+- `!unalias='!alias-meta delete'`
 
 ### Listing Aliases
 
 To list all aliases, use the command `!aliaslist`.
 
 Another way of listing all aliases is:
-* `!alias-meta list`
+- `!alias-meta list`
 
 For reference, the alias used there is:
-* `!aliaslist='!alias-meta list'`
+- `!aliaslist='!alias-meta list'`
 
 ### Getting the Command an Alias is Aliased to
 
