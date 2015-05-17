@@ -30,6 +30,9 @@ layout: markdown
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
   - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
   - [Listing Commands](#listing-commands)
+- [Aliases](#aliases)
+  - [Creating an Alias](#creating-an-alias)
+  - [Deleting an Alias](#deleting-an-alias)
 
 ## Version
 
@@ -198,5 +201,34 @@ For reference, the alias used there is:
 * `!commands='!command'`
 
 ## Aliases
+
+The main command for working with aliases is `!alias-meta`. You may say, "That's a really weird and confusing command name. Why would you name it that?" It has that name because easier-to-use aliases are used for most actions, as will become apparent.
+
+### Creating an Alias
+
+To create an alias, use the command `!alias <alias name> <command>`. `<alias name>` must not contain spaces, but `<command>` may. If an alias with the specified name already exists, it is overwritten. For example, to create the already-mentioned `!addcom` alias (which is built-in and does not need to be added manually), you might run the command `!alias !addcom !command add`.
+
+Another way of creating an alias is:
+* `!alias-meta set <alias name> <command>`
+
+For reference, the alias used there is:
+* `!alias='!alias set'`
+
+If you wish to add an alias only if an alias with the specified name does not exist, you can use the command `!alias-meta add <alias name> <command>` or `!alias-meta new <alias name> <command>`.
+
+### Deleting an Alias
+
+To delete an alias, use the command `!unalias <alias name>`. For example, to remove the `!addcom` alias, you would run the command `!unalias !addcom`.
+
+Other ways of deleting an alias are:
+* `!alias-meta delete <alias name>`
+* `!alias-meta remove <alias name>`
+* `!alias-meta del <alias name>`
+* `!alias-meta rm <alias name>`
+
+For reference, the alias used there is:
+* `!unalias='!alias delete'`
+
+
 
 {% endraw %}
