@@ -34,6 +34,8 @@ layout: markdown
   - [Creating an Alias](#creating-an-alias)
   - [Deleting an Alias](#deleting-an-alias)
   - [Listing Aliases](#listing-aliases)
+  - [Getting the Command an Alias is Aliased to](#getting-the-command-an-alias-is-aliased-to)
+  - [Disabling and Enabling Aliases](#disabling-and-enabling-aliases)
 
 ## Version
 
