@@ -1,5 +1,5 @@
 ---
-title: Chat Documentation
+title: Tutorial - Chat
 layout: markdown
 ---
 
