@@ -240,4 +240,16 @@ Another way of listing all aliases is:
 For reference, the alias used there is:
 * `!aliaslist='!alias-meta list'`
 
+### Getting the Command an Alias is Aliased to
+
+If you don't remember what command an alias is aliased to, you can run the command `!alias-meta getCommand <alias name>`, and the bot will print the command in chat. (Like commands in general, `getCommand` is not case sensitive.)
+
+For example, if you run the command `!alias-meta getCommand !addcom`, the bot will reply `'!addcom' is aliased to: !command add`.
+
+### Disabling and Enabling Aliases
+
+To disable an alias without deleting it, use the command `!alias-meta disable <alias name>`. The alias will then be ignored if it is used.
+
+To enable an alias again, use the command `!alias-meta enable <alias name>`.
+
 {% endraw %}
