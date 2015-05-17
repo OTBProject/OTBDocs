@@ -27,6 +27,7 @@ layout: markdown
   - [Disabling and Enabling Commands](#disabling-and-enabling-commands)
   - [Renaming Commands](#renaming-commands)
   - [Changing the Minimum User Level](#changing-the-minimum-user-level)
+  - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-or-arguments)
 
 ## Version
 
