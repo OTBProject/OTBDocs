@@ -30,6 +30,7 @@ layout: markdown
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
   - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
   - [Listing Commands](#listing-commands)
+  - [Getting the Raw Response of a Command](#getting-the-raw-response-of-a-command)
 - [Aliases](#aliases)
   - [Creating an Alias](#creating-an-alias)
   - [Deleting an Alias](#deleting-an-alias)
@@ -199,6 +200,18 @@ To list all commands you can run the command `!command list`. (There is a type o
 
 Another way of listing commands is:
 * `!commands list`
+
+For reference, the alias used there is:
+* `!commands='!command'`
+
+### Getting the Raw Response of a Command
+
+You may want to get the raw response of a command if you discover a typo or decide you want to change the response slightly. What is the raw response? The raw response is the text given as the response when creating the command. "Why don't you just run the command then?", you might ask. There are several special terms you can use when creating a command which get replaced by other text (for example, `[[user]]` will be replaced by the name of the user running the command). Special terms will be described in detail later.
+
+To get the raw response for a command, use the command `!command raw <command name>`.
+
+Another way of getting the raw response for a command is:
+* `!commands raw <command name>`
 
 For reference, the alias used there is:
 * `!commands='!command'`
