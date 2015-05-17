@@ -29,6 +29,7 @@ layout: markdown
   - [Changing the Minimum User Level](#changing-the-minimum-user-level)
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
   - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
+  - [Listing Commands](#listing-commands)
 
 ## Version
 
@@ -185,6 +186,16 @@ To change the minimum number of arguments for an existing command, you can use t
 ### Resetting the Count of a Command
 
 The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!resetCount <command name>`.
+
+### Listing Commands
+
+To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained later.)
+
+Another way of listing commands is:
+* `!commands list`
+
+For reference, the alias used there is:
+* `!commands='!command'`
 
 ## Aliases
 
