@@ -212,7 +212,7 @@ Another way of creating an alias is:
 * `!alias-meta set <alias name> <command>`
 
 For reference, the alias used there is:
-* `!alias='!alias set'`
+* `!alias='!alias-meta set'`
 
 If you wish to add an alias only if an alias with the specified name does not exist, you can use the command `!alias-meta add <alias name> <command>` or `!alias-meta new <alias name> <command>`.
 
@@ -227,8 +227,16 @@ Other ways of deleting an alias are:
 * `!alias-meta rm <alias name>`
 
 For reference, the alias used there is:
-* `!unalias='!alias delete'`
+* `!unalias='!alias-meta delete'`
 
+### Listing Aliases
 
+To list all aliases, use the command `!aliaslist`.
+
+Another way of listing all aliases is:
+* `!alias-meta list`
+
+For reference, the alias used there is:
+* `!aliaslist='!alias-meta list'`
 
 {% endraw %}
