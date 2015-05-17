@@ -83,10 +83,10 @@ There are two ways to add a command: you can add the new command only if it does
 The basic way of adding a command is `!command add <command name> <response>`. For example, suppose you want to add a command `!example`, for which the response is `This is an example command`. You would type `!command add !example This is an example command` in chat, and the bot would add the new command `!example`. As mentioned previously, `<command name>` cannot contain any spaces.
 
 Other ways of adding a command (some of which you may be familiar with from other bots) are:
-+	`!command new <command name> <response>`
-+	`!addcom <command name> <response>`
-*	`!commands add <command name> <response>`
-*	`!commands new <command name> <response>`
+-	test text here `!command new <command name> <response>`
+-	dddf `!addcom <command name> <response>`
+-	fddf `!commands add <command name> <response>`
+-	dfdf `!commands new <command name> <response>`
 
 For reference, the aliases used there are:
 - `!addcom='!command add'`
