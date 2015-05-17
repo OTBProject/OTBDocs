@@ -13,6 +13,7 @@ layout: markdown
 
 - [Version](#version)
   - [Changelog](#changelog)
+- [Notes](#notes)
 - [Background](#background)
   - [What are Commands?](#what-are-commands)
   - [What are Aliases?](#what-are-aliases)
@@ -44,6 +45,12 @@ Version 1.0 [WIP]
 
 ### Changelog
 * 1.0
+
+## Notes
+
+This tutorial is still a work in progress, so it should not be considered a comprehensive description of everything the bot can do.
+
+If you have any questions or if anything in this tutorial is unclear, please leave a question in the <a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issue Tracker</a>, or [contact us](../../contact).
 
 ## Background
 
