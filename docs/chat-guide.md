@@ -28,6 +28,7 @@ layout: markdown
   - [Renaming Commands](#renaming-commands)
   - [Changing the Minimum User Level](#changing-the-minimum-user-level)
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
+  - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
 
 ## Version
 
@@ -181,6 +182,10 @@ To change the user level required to run an existing command, you can use the co
 
 To change the minimum number of arguments for an existing command, you can use the command `!setMinArgs <command name> <min args>`, where `<min args>` is a whole number greater than or equal to 0, [as described earlier](#minimum-number-of-arguments-for-a-command).
 
+### Resetting the Count of a Command
 
+The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!resetCount <command name>`.
+
+## Aliases
 
 {% endraw %}
