@@ -85,8 +85,8 @@ The basic way of adding a command is `!command add <command name> <response>`. F
 Other ways of adding a command (some of which you may be familiar with from other bots) are:
 +	`!command new <command name> <response>`
 +	`!addcom <command name> <response>`
--	`!commands add <command name> <response>`
--	`!commands new <command name> <response>`
+*	`!commands add <command name> <response>`
+*	`!commands new <command name> <response>`
 
 For reference, the aliases used there are:
 - `!addcom='!command add'`
