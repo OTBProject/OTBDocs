@@ -172,4 +172,14 @@ For example, suppose you want to rename the previously mentioned command `!examp
 
 ### Changing the Minimum User Level
 
+To change the user level required to run an existing command, you can use the command `!setExecUL <command name> <user level>`, where `<user level>` is one of the user level markers from [the table earlier](#minimum-user-level-for-a-command).
+
+(As mentioned earlier, commands are not case sensitive, so `!setexecul` works just as well. The casing used here is just to help make the meaning of the command clearer.)
+
+### Changing the Minimum Number of Arguments
+
+To change the minimum number of arguments for an existing command, you can use the command `!setMinArgs <command name> <min args>`, where `<min args>` is a whole number greater than or equal to 0, [as described earlier](#minimum-number-of-arguments-for-a-command).
+
+
+
 {% endraw %}
