@@ -33,6 +33,7 @@ layout: markdown
 - [Aliases](#aliases)
   - [Creating an Alias](#creating-an-alias)
   - [Deleting an Alias](#deleting-an-alias)
+  - [Listing Aliases](#listing-aliases)
 
 ## Version
 
