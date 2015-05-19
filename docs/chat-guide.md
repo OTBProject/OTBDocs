@@ -38,6 +38,8 @@ layout: markdown
   - [Listing Aliases](#listing-aliases)
   - [Getting the Command an Alias is Aliased to](#getting-the-command-an-alias-is-aliased-to)
   - [Disabling and Enabling Aliases](#disabling-and-enabling-aliases)
+- [Quotes](#quotes)
+  - [Adding a Quote](#adding-a-quote)
 
 ## Version
 
@@ -293,5 +295,13 @@ For example, if you run the command `!alias-meta getCommand !addcom`, the bot wi
 To disable an alias without deleting it, use the command `!alias-meta disable <alias name>`. The alias will then be ignored if it is used.
 
 To enable an alias again, use the command `!alias-meta enable <alias name>`.
+
+## Quotes
+
+The bot can store quotes and easily retrieve random or specific ones.
+
+### Adding a Quote
+
+
 
 {% endraw %}
