@@ -298,9 +298,15 @@ To enable an alias again, use the command `!alias-meta enable <alias name>`.
 
 ## Quotes
 
-The bot can store quotes and easily retrieve random or specific ones.
+If someone says something funny or memorable on stream or in chat, the bot can store it as a quote, so it can be retrieved and printed later in chat. Quotes can be retrieved either randomly or by an ID number, as will be explained shortly.
 
 ### Adding a Quote
+
+### Removing a Quote
+
+### Listing Quotes
+
+### Retrieving a Quote
 
 
 
