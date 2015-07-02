@@ -7,7 +7,7 @@ layout: markdown
 
 # OTB Project Documentation
 
-### Tutorial: How to Run a Bot
+### Tutorial: Bot Setup
 
 ## Table of Contents
  - [Version](#version)
