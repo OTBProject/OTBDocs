@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Chat
+title: Tutorial - Chat Basics
 layout: markdown
 ---
 
@@ -7,7 +7,8 @@ layout: markdown
 
 # OTB Project Documentation
 
-### Tutorial: How to Make the Bot Do Things
+### Tutorial: Chat Basics
+##### Commands, Aliases, and Quotes
 
 ## Table of Contents
 
