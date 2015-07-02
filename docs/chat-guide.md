@@ -116,7 +116,7 @@ For reference, the aliases used there are:
 
 ### Restrictions on Commands (and How to Use Flags)
 
-You may be wondering at this point how you can make it so that only a moderator can run a command. Or maybe also subscribers? I will discuss how asign a minimum user level to run a command here, though descriptions of all of the user levels will come a bit later.
+You may be wondering at this point how you can make it so that only a moderator can run a command. Or maybe also subscribers? I will discuss how asign a minimum user level to run a command here; you can find more information about user levels and their descriptions [here](tutorial-user-levels.html).
 
 There are two ways in which you can restrict how a command is run, and both are specified using flags in the `!command add` or `!command set` commands (or in any equivalent commands such as `!setcom`).
 
@@ -126,16 +126,16 @@ What's a flag? A flag is something you add to the command in order to specify mo
 
 The flag to assign a minimum user level for a command is `--ul=<user level>` (`ul` for "user level"). For example, suppose you only want moderators (or people with a higher user level) to be able to run your `!example` command. You could add it by typing `!command add --ul=mod !example This is an example command` in chat.
 
-The following is a list of valid markers which can be used with the `--ul=<user level>` flag in place of `<user level>`. If you are confused as to what some of the user levels listed are, don't worry; they will be explained later.
+The following is a list of valid markers which can be used with the `--ul=<user level>` flag in place of `<user level>`. If you are confused as to what some of the user levels listed are, see the [tutorial about user levels](tutorial-user-levels.html).
 
 | User Level | Markers |
 |:-----------|:----------|
-|Default|`default | def | none | any | all`|
-|Subscriber|`subscriber | sub`|
-|Regular|`regular | reg`|
-|Moderator|`moderator | mod`|
-|Super Moderator|`super-moderator | super_moderator | smod | sm`|
-|Broadcaster|`broadcaster | bc`|
+|[Default](tutorial-user-levels.html#default)|`default | def | none | any | all`|
+|[Subscriber](tutorial-user-levels.html#subscriber)|`subscriber | sub`|
+|[Regular](tutorial-user-levels.html#regular)|`regular | reg`|
+|[Moderator](tutorial-user-levels.html#moderator)|`moderator | mod`|
+|[Super-moderator](tutorial-user-levels.html#super-moderator)|`super-moderator | super_moderator | smod | sm`|
+|[Broadcaster](tutorial-user-levels.html#broadcaster)|`broadcaster | bc`|
 
 #### Minimum Number of Arguments for a Command
 
