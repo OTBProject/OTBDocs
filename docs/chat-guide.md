@@ -44,14 +44,16 @@ layout: markdown
 
 ## Version
 
-Version 1.0 [WIP]
+Version 1.0
 
 ### Changelog
+
 * 1.0
+  * Created tutorial
 
 ## Notes
 
-This tutorial is still a work in progress, so it should not be considered a comprehensive description of everything the bot can do.
+For other tutorials, see the [Tutorial Table of Contents](tutorial-toc.html).
 
 If you have any questions or if anything in this tutorial is unclear, please leave a question in the <a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issue Tracker</a>, or [contact us](../../contact).
 
@@ -84,6 +86,8 @@ There are two ways to add a command: you can add the new command only if it does
 #### Adding a Command
 
 The basic way of adding a command is `!command add <command name> <response>`. For example, suppose you want to add a command `!example`, for which the response is `This is an example command`. You would type `!command add !example This is an example command` in chat, and the bot would add the new command `!example`. As mentioned previously, `<command name>` cannot contain any spaces.
+
+Subcommands such as `add` (in `!command add`), and those mentioned later (for commands, aliases, and quotes) are not case sensitive; that is, `!command ADD` is equaly valid. Casing for subcommands in this tutorial is used purely for clarity.
 
 Other ways of adding a command (some of which you may be familiar with from other bots) are:
 
@@ -301,14 +305,76 @@ To enable an alias again, use the command `!alias-meta enable <alias name>`.
 
 If someone says something funny or memorable on stream or in chat, the bot can store it as a quote, so it can be retrieved and printed later in chat. Quotes can be retrieved either randomly or by an ID number, as will be explained shortly.
 
+The main command for adding and removing quotes is `!quote`; however, `!quotes` is aliased to `!quote` (that is, `!quotes='!quote'`).
+
 ### Adding a Quote
+
+To add a quote, use the command `!quote add <quote>`. `<quote>` may contain spaces, and may be as long or short as you wish, as long as a quote with the exact same text does not already exist.
+
+Each new quote is given a numeric ID number (in roughly sequential order).
+
+Other ways of adding a quote are:
+
+* `!quote new <quote>`
+* `!quotes add <quote>`
+* `!quotes new <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
 
 ### Removing a Quote
 
+To remove a quote, use the command `!quote remove <id>`, where `<id>` is the ID number of the quote. (This will leave a gap in the sequential order of quote IDs, which will be filled when another quote is added.)
+
+If you do not know the ID of a quote, see the following section: [Getting the ID of a Quote](#getting-the-id-of-a-quote).
+
+Other ways of removing a quote are:
+
+* `!quote delete <quote>`
+* `!quote del <quote>`
+* `!quote rm <quote>`
+* `!quotes remove <quote>`
+* `!quotes delete <quote>`
+* `!quotes del <quote>`
+* `!quotes rm <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
+### Getting the ID of a Quote
+
+If you know the full text of a quote, you can use the command `!quote getID <quote>` (where `<quote>` is the full text of the quote) to get the ID of the quote.
+
+Another way of getting the ID of a quote is:
+
+* `!quotes getID <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
 ### Listing Quotes
+
+To list the IDs of all quotes, use the command `!quote list`.
+
+Other ways of listing quote IDs are:
+
+* `!quote listIDs`
+* `!quote IDs`
+* `!quotes list`
+* `!quotes listIDs`
+* `!quotes IDs`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
 
 ### Retrieving a Quote
 
+To have the bot print a random quote, use the command `!getQuote`. To have the bot print a specific quote, use the command `!getquote <id>`, where `<id>` is the ID number of the quote.
 
+There is also a special term which can be used in the text of commands to retrieve a random or specific quote, which is discussed in the [tutorial about building commands]() (not yet written).
 
 {% endraw %}
