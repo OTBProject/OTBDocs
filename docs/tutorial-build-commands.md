@@ -72,7 +72,16 @@ Modifiers can be used for any term. There are certain terms for which modifiers 
 
 ## Embedded Strings
 
+An embedded string is a string enclosed in `{{` and `}}` which provides extra information to a term. For example, it might provide a default value for the term if some other value is missing. Embedded strings are necessary, especially for more advanced terms, to allow greater functionality.
+
+Unlike the rest of the term, an embedded string may contain spaces, and may even contain other terms. They may also be empty `{{}}` if you so desire.
+
+If a term expects more embedded strings than you've given it, it will treat any missing embedded strings as empty. For example, if you use the term `[[example{{string 1}}{string 2}}]]`, but the term `[[example]]` uses three embedded strings, it will treat the third embedded string as empty; that is, it will be as if you had used the term as `[[example{{string 1}}{{string 2}}{{}}]]`.
+
 ## Terms
+
+| Term | Description |
+|:-----|:------------|
 
 #### `user`
 
