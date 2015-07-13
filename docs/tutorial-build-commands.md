@@ -54,22 +54,19 @@ That may seems somewhat confusing and unclear, but will hopefully be less so aft
 
 ## Modifiers
 
-A modifier allows you to customize the the result of a term, and is best explained by an example.
-
-As you saw earlier, the `[[user]]` term always gets the user's name entirely in lowercase. If you want the user's name to be entirely in uppercase, you would use the modifier `upper`. If we modify the previously mentioned `!example` command slightly, such that its response is `[[user.upper]] ran this command`, then when NthPortal runs it, the bot will respond with `NTHPORTAL ran this command`.
+A modifier allows you to customize the capitalization of the string returned by a term.
+For example, if there was a term `[[example]]` which got replaced by the string `this is an example`, then `[[example.upper]]` would get replaced by `THIS IS AN EXAMPLE`. (Please note that `[[example]]` is not actually a term.)
 
 The valid modifiers and their descriptions are listed in the table below. They are case sensitive. If an invalid modifier (one not specified below) is given, it is ignored.
-
-(Note: The word or words being modified are referred to as 'the string'.)
 
 | Modifier | Description |
 |:---------|:------------|
 |`lower`|The string is made entirely lowercase.|
 |`upper`|The string is made entirely uppercase.|
 |`first_cap`|The first letter of the string is made uppercase. All other letters are made lowercase.|
-|`word_cap`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are made lowercase.<br>Identical to `first_cap` for anything which is a single word (e.g. `[[user]]`).|
+|`word_cap`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are made lowercase.<br>Identical to `first_cap` for anything which is a single word.|
 |`first_cap_soft`|The first letter of the string is made uppercase. All other letters are not changed.|
-|`word_cap_soft`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are not changed.<br>Identical to `first_cap_soft` for anything which is a single word (e.g. `[[user]]`).|
+|`word_cap_soft`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are not changed.<br>Identical to `first_cap_soft` for anything which is a single word.|
 
 Modifiers can be used for any term. There are certain terms for which modifiers have no effect, but even in those cases they do no harm.
 
