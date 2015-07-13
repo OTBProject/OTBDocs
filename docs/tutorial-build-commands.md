@@ -12,6 +12,13 @@ layout: markdown
 ## Table of Contents
 
 - [Version](#version)
+- [Overview](#overview)
+- [`user`](#user)
+- [Terms and their Structure](#terms-and-their-structure)
+- [Modifiers](#modifiers)
+- [`count`](#count)
+- [`args`](#args)
+- [Index](#index)
 
 ## Version
 
