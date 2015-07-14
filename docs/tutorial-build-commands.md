@@ -82,6 +82,20 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 | Term | Description |
 |:-----|:------------|
+|`[[user]]`|Returns the name of the user who ran the command.|
+|`[[bot]]`|Returns the bot's username.|
+|`[[channel]]`|Returns the channel in which the command was run.|
+|`[[service]]`|The name of the service the bot is connected to ("Twitch" or "Beam").|
+|`[[count]]`|The number of times the command has been run since it was created or since it was last modified.|
+|`[[numargs]]`|The number of arguments with which the command was run.|
+|`[[args{{default}}]]`|All arguments with which the command was run (separated by spaces). If the command is run without arguments, and a default is given, the default is used. The default can contain another special term. If no default is given, it is replaced by an empty string (it is left blank).|
+|`[[argN{{default}}]]`|The `N`th argument, where `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, and a default is given, the default is used. The default can contain another special term. If no default is given, it is replaced by an empty string (it is left blank).|
+|`[[fromargN{{default}}]]`|All the arguments from the `N`th argument and on. As with `[[argN]]`, `N` must be a whole number. If `N` is 1, it is equivalent to `[[args]]`.|
+|`[[quote]]` or `[[quote{{id}}]]`|A random quote from the quote database if no ID is given. If an ID is given, the quote with the specified ID (if it exists; an empty string if it does not exist or the ID is invalid).|
+|`[[ifargs{{yes_args}}{{no_args}}]]`|Prints the first embedded string string if at least one argument was given. If no arguments were given, it prints the second embedded string. For either condition, if no string is supplied, it does nothing.|
+|`[[ifargN{{N_args}}{{not_N_args}}]]`|Prints the first embedded string if at least `N` arguments were given. If less than `N` arguments were given, it prints the second embedded string. For either condition, ff no string is supplied, it does nothing. `N` must be greater than 0.|
+|`[[foreach{{prepend}}{{append}}]]`|For each argument provided, prints the string specified as `prepend`, the argument, and then the string specified as `append`. If a modifier (described later) is used, it is applied to each argument (but not to `prepend` or `append`). If only one string is provided, it is `prepend`. If both are left out, the arguments are printed unmodified (and without spaces).|
+|`[[equal{{compare1}}{{compare2}}{{same}}{{different}}]]`|If the first two embedded strings are the same, then it prints the third embedded string. If not, it prints the fourth embedded string. Not particularly useful if neither of the first two embedded strings are a term.|
 
 #### `user`
 
