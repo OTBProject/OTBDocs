@@ -77,22 +77,22 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 ## Terms
 
-| Term | Description | Example |
-|:-----|:------------|:--------|
-|`[[user]]`|Returns the name of the user who ran the command.|`[NthPortal] !command set !example Hello [[user]]! How are you today?`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello nthportal! How are you today?`|
-|`[[bot]]`|Returns the bot's username.|`[NthPortal] !command set !example My name is: [[bot]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] My name is: otb`|
-|`[[channel]]`|Returns the channel in which the command was run.|`[NthPortal] !command set !example This is [[channel]]'s channel.`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This is maddiiemaneater's channel`|
-|`[[service]]`|Returns the name of the service the bot is connected to ("Twitch" or "Beam").|`[NthPortal] !command set !example I am connected to [[service]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] I am connected to Beam`|
-|`[[count]]`|Returns the number of times the command has been run since it was created or since it was last modified.|`[NthPortal] !command set !example This command has been run [[count]] times`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 42 times`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 43 times`|
-|`[[numargs]]`|Returns the number of arguments with which the command was run.|`[NthPortal] !command set !example This command was run with [[numargs]] arguments`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command was run with 0 arguments`<br><br>`[NthPortal] !example one two three`<br>`[OTB] This command was run with 3 arguments`|
-|`[[args{{default}}]]`|Returns all arguments with which the command was run (separated by spaces). If the command was run without arguments, it returns the first embedded string.||
-|`[[argN{{default}}]]`|Returns the `N`th argument, where `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.||
-|`[[fromargN{{default}}]]`|Returns all the arguments from the `N`th argument and on (separated by spaces). `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.||
-|`[[quote]]` or `[[quote{{ID}}]]`|Returns a random quote from the quote database if the first embedded string is empty or missing. If the first embedded string is not empty, it uses that embedded string as an ID, and returns the quote with the specified ID (if it exists, or an empty string if it does not exist or the ID is invalid).||
-|`[[ifargs{{yes_args}}{{no_args}}]]`|Returns the first embedded string if at least one argument was given, or the second embedded string if no arguments were given.||
-|`[[ifargN{{N_args}}{{not_N_args}}]]`|Returns the first embedded string if at least `N` arguments were given, or the second embedded string if fewer than `N` arguments were given. `N` is a whole number greater than 0.||
-|`[[foreach{{prepend}}{{append}}]]`|For each argument provided, returns the first embedded string, the argument, and then the second embedded string. If a modifier is used, it is applied to each argument (but not to the embedded strings). Spaces are not added between arguments.||
-|`[[equal{{compare1}}{{compare2}}{{same}}{{different}}]]`|If the first two embedded strings are the same, then it returns the third embedded string. If not, it returns the fourth embedded string.||
+| Term | Description |
+|:-----|:------------|
+|`[[user]]`|Returns the name of the user who ran the command.<br><br>`[NthPortal] !command set !example Hello [[user]]! How are you today?`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello nthportal! How are you today?`|
+|`[[bot]]`|Returns the bot's username.<br><br>`[NthPortal] !command set !example My name is: [[bot]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] My name is: otb`|
+|`[[channel]]`|Returns the channel in which the command was run.<br><br>`[NthPortal] !command set !example This is [[channel]]'s channel.`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This is maddiiemaneater's channel`|
+|`[[service]]`|Returns the name of the service the bot is connected to ("Twitch" or "Beam").<br><br>`[NthPortal] !command set !example I am connected to [[service]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] I am connected to Beam`|
+|`[[count]]`|Returns the number of times the command has been run since it was created or since it was last modified.<br><br>`[NthPortal] !command set !example This command has been run [[count]] time(s)`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 1 time(s)`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 2 time(s)`|
+|`[[numargs]]`|Returns the number of arguments with which the command was run.<br><br>`[NthPortal] !command set !example This command was run with [[numargs]] arguments`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command was run with 0 arguments`<br><br>`[NthPortal] !example one two three`<br>`[OTB] This command was run with 3 arguments`|
+|`[[args{{default}}]]`|Returns all arguments with which the command was run (separated by spaces). If the command was run without arguments, it returns the first embedded string.<br><br>`[NthPortal] !command set !example Welcome to the stream [[args{{someone}}]]!`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Welcome to the stream someone!`<br><br>`[NthPortal] !example Fred and George`<br>`[OTB] Welcome to the stream Fred and George!`|
+|`[[argN{{default}}]]`|Returns the `N`th argument, where `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.|
+|`[[fromargN{{default}}]]`|Returns all the arguments from the `N`th argument and on (separated by spaces). `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.|
+|`[[quote]]` or `[[quote{{ID}}]]`|Returns a random quote from the quote database if the first embedded string is empty or missing. If the first embedded string is not empty, it uses that embedded string as an ID, and returns the quote with the specified ID (if it exists, or an empty string if it does not exist or the ID is invalid).|
+|`[[ifargs{{yes_args}}{{no_args}}]]`|Returns the first embedded string if at least one argument was given, or the second embedded string if no arguments were given.|
+|`[[ifargN{{N_args}}{{not_N_args}}]]`|Returns the first embedded string if at least `N` arguments were given, or the second embedded string if fewer than `N` arguments were given. `N` is a whole number greater than 0.|
+|`[[foreach{{prepend}}{{append}}]]`|For each argument provided, returns the first embedded string, the argument, and then the second embedded string. If a modifier is used, it is applied to each argument (but not to the embedded strings). Spaces are not added between arguments.|
+|`[[equal{{compare1}}{{compare2}}{{same}}{{different}}]]`|If the first two embedded strings are the same, then it returns the third embedded string. If not, it returns the fourth embedded string.|
 
 #### `user`
 
