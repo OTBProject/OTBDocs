@@ -17,9 +17,6 @@ layout: markdown
 - [Modifiers](#modifiers)
 - [Embedded Strings](#embedded-strings)
 - [Terms](#terms)
-  - [user](#user)
-  - [count](#count)
-  - [args](#args)
 
 ## Version
 
@@ -55,18 +52,18 @@ That may seems somewhat confusing and unclear, but will hopefully be less so aft
 ## Modifiers
 
 A modifier allows you to customize the capitalization of the string returned by a term.
-For example, if there was a term `[[example]]` which got replaced by the string `this is an example`, then `[[example.upper]]` would get replaced by `THIS IS AN EXAMPLE`. (Please note that `[[example]]` is not actually a term.)
+For example, if there was a term `[[example]]` which got replaced by the string `this is an EXAMPLE`, then `[[example.upper]]` would get replaced by `THIS IS AN EXAMPLE`. (Please note that `[[example]]` is not actually a term.)
 
-The valid modifiers and their descriptions are listed in the table below. They are case sensitive. If an invalid modifier (one not specified below) is given, it is ignored.
+The valid modifiers and their descriptions are listed in the table below. They are case sensitive. If an invalid modifier (one not specified below) is given, it is ignored. The previously mentioned `[[example]]` term is used as an example for each modifier.
 
-| Modifier | Description |
-|:---------|:------------|
-|`lower`|The string is made entirely lowercase.|
-|`upper`|The string is made entirely uppercase.|
-|`first_cap`|The first letter of the string is made uppercase. All other letters are made lowercase.|
-|`word_cap`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are made lowercase.<br>Identical to `first_cap` for anything which is a single word.|
-|`first_cap_soft`|The first letter of the string is made uppercase. All other letters are not changed.|
-|`word_cap_soft`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are not changed.<br>Identical to `first_cap_soft` for anything which is a single word.|
+| Modifier | Description | Example |
+|:---------|:------------|:--------|
+|`lower`|The string is made entirely lowercase.|`this is an example`|
+|`upper`|The string is made entirely uppercase.|`THIS IS AN EXAMPLE`|
+|`first_cap`|The first letter of the string is made uppercase. All other letters are made lowercase.|`This is an example`|
+|`word_cap`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are made lowercase.<br>Identical to `first_cap` for anything which is a single word.|`This Is An Example`|
+|`first_cap_soft`|The first letter of the string is made uppercase. All other letters are not changed.|`This is an EXAMPLE`|
+|`word_cap_soft`|The first letter of each word (separated by a space) in the string is made uppercase. All other letters are not changed.<br>Identical to `first_cap_soft` for anything which is a single word.|`This Is An EXAMPLE`|
 
 Modifiers can be used for any term. There are certain terms for which modifiers have no effect, but even in those cases they do no harm.
 
@@ -82,8 +79,8 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 | Term | Description | Examples |
 |:-----|:------------|:---------|
-|`[[user]]`|Returns the name of the user who ran the command.||
-|`[[bot]]`|Returns the bot's username.||
+|`[[user]]`|Returns the name of the user who ran the command.|`[NthPortal] !command set !example Hello [[user]]! How are you today?`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello nthportal! How are you today?`|
+|`[[bot]]`|Returns the bot's username.|`[NthPortal] !command set !example My name is: [[bot]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] My name is: otb`|
 |`[[channel]]`|Returns the channel in which the command was run.||
 |`[[service]]`|Returns the name of the service the bot is connected to ("Twitch" or "Beam").||
 |`[[count]]`|Returns the number of times the command has been run since it was created or since it was last modified.||
