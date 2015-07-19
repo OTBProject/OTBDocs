@@ -77,14 +77,14 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 ## Terms
 
-| Term | Description | Examples |
-|:-----|:------------|:---------|
+| Term | Description | Example |
+|:-----|:------------|:--------|
 |`[[user]]`|Returns the name of the user who ran the command.|`[NthPortal] !command set !example Hello [[user]]! How are you today?`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello nthportal! How are you today?`|
 |`[[bot]]`|Returns the bot's username.|`[NthPortal] !command set !example My name is: [[bot]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] My name is: otb`|
-|`[[channel]]`|Returns the channel in which the command was run.||
-|`[[service]]`|Returns the name of the service the bot is connected to ("Twitch" or "Beam").||
-|`[[count]]`|Returns the number of times the command has been run since it was created or since it was last modified.||
-|`[[numargs]]`|Returns the number of arguments with which the command was run.||
+|`[[channel]]`|Returns the channel in which the command was run.|`[NthPortal] !command set !example This is [[channel]]'s channel.`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This is maddiiemaneater's channel`|
+|`[[service]]`|Returns the name of the service the bot is connected to ("Twitch" or "Beam").|`[NthPortal] !command set !example I am connected to [[service]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] I am connected to Beam`|
+|`[[count]]`|Returns the number of times the command has been run since it was created or since it was last modified.|`[NthPortal] !command set !example This command has been run [[count]] times`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 42 times`<br><br>`[NthPortal] !example`<br>`[OTB] This command has been run 43 times`|
+|`[[numargs]]`|Returns the number of arguments with which the command was run.|`[NthPortal] !command set !example This command was run with [[numargs]] arguments`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] This command was run with 0 arguments`<br><br>`[NthPortal] !example one two three`<br>`[OTB] This command was run with 3 arguments`|
 |`[[args{{default}}]]`|Returns all arguments with which the command was run (separated by spaces). If the command was run without arguments, it returns the first embedded string.||
 |`[[argN{{default}}]]`|Returns the `N`th argument, where `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.||
 |`[[fromargN{{default}}]]`|Returns all the arguments from the `N`th argument and on (separated by spaces). `N` is a whole number greater than 0. If the command is run with fewer than `N` arguments, it returns the first embedded string.||
