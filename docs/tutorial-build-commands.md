@@ -17,6 +17,7 @@ layout: markdown
 - [Modifiers](#modifiers)
 - [Embedded Strings](#embedded-strings)
 - [Terms](#terms)
+- [Advanced Examples](#advanced-examples)
 
 ## Version
 
@@ -91,8 +92,10 @@ If a term expects more embedded strings than you've given it, it will treat any 
 |`[[quote]]` or `[[quote{{ID}}]]`|Returns a random quote from the quote database if the first embedded string is empty or missing. If the first embedded string is not empty, it uses that embedded string as an ID, and returns the quote with the specified ID (if it exists, or an empty string if it does not exist or the ID is invalid).<br><br>`[NthPortal] !command set !example Quote: [[quote{{[[arg1]]}}]]`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Quote: Example quote with ID 9`<br><br>`[NthPortal] !example`<br>`[OTB] Quote: Example quote with ID 2`<br><br>`[NthPortal] !example 4`<br>`[OTB] Quote: Example quote with ID 4`|
 |`[[ifargs{{yes_args}}{{no_args}}]]`|Returns the first embedded string if at least one argument was given, or the second embedded string if no arguments were given.<br><br>`[NthPortal] !command set !example Were there any args? [[ifargs{{Yes}}{{Nope, sorry}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Were there any args? Nope, sorry.`<br><br>`[NthPortal] !example hat`<br>`[OTB] Were there any args? Yes.`|
 |`[[ifargN{{N_args}}{{not_N_args}}]]`|Returns the first embedded string if at least `N` arguments were given, or the second embedded string if fewer than `N` arguments were given. `N` is a whole number greater than 0.<br><br>`[NthPortal] !command set !example Were there 3 args? [[ifarg3{{Yes}}{{Nope, sorry}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example one two`<br>`[OTB] Were there 3 args? Nope, sorry.`<br><br>`[NthPortal] !example one two three`<br>`[OTB] Were there 3 args? Yes.`|
-|`[[foreach{{prepend}}{{append}}]]`|For each argument provided, returns the first embedded string, the argument, and then the second embedded string. If a modifier is used, it is applied to each argument (but not to the embedded strings). Spaces are not added between arguments.|
-|`[[equal{{compare1}}{{compare2}}{{same}}{{different}}]]`|If the first two embedded strings are the same, then it returns the third embedded string. If not, it returns the fourth embedded string.|
+|`[[foreach{{prepend}}{{append}}]]`|For each argument provided, returns the first embedded string, the argument, and then the second embedded string. If a modifier is used, it is applied to each argument (but not to the embedded strings). Spaces are not added between arguments.<br><br>`[NthPortal] !command set !example Tags: [[foreach{{<}}{{>}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example one two three`<br>`[OTB] Tags: <one><two><three>`|
+|`[[equal{{compare1}}{{compare2}}{{same}}{{different}}]]`|If the first two embedded strings are the same, then it returns the third embedded string. If not, it returns the fourth embedded string.<br><br>`[NthPortal] !command set !example Hello? [[equal{{[[user]]}}{{maddiiemaneater}}{{Ohai Maddiie!}}{{You're not Maddiie D:}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello? You're not Maddiie D:`<br><br>`[MaddiieManeater] !example`<br>`[OTB] Hello? Ohai Maddiie!`|
+
+## Advanced Examples
 
 #### `user`
 
