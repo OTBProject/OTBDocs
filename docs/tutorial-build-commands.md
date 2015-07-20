@@ -97,22 +97,20 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 ## Advanced Examples
 
-#### `user`
+Multi-stream link based on service:
+```
+[MaddiieManeater] !command set !multi [[equal{{[[service]]}}{{Twitch}}{{Watch [[foreach{{}}{{[[ifarg2{{, }}]]}}]] and me at the same time! example.com/multistream/[[channel]]/[[foreach.lower{{}}{{/}}]]}}{{Beam has not implemented their own multi-streams as of 2015/07/19. Sorry.}}]]
+[OTB] Set command '!multi'.
 
-One of the simplest terms is `[[user]]`, which refers to the user who ran the command. For example, if there is a command `!example` with the response `[[user]] ran this command`, then if the user `NthPortal` runs the command `!example`, the bot will send the message `nthportal ran this command`. If `The_Lone_Devil` runs the command, it will print `the_lone_devil ran this command`.
+<On Twitch in MaddiieManeater's channel>
+[MaddiieManeater] !multi NthPortal
+[OTB] Watch NthPortal and me at the same time! example.com/multistream/maddiiemaneater/nthportal/
+[MaddiieManeater] !multi NthPortal The_Lone_Devil
+[OTB] Watch NthPortal, The_Lone_Devil, and me at the same time! example.com/multistream/maddiiemaneater/nthportal/the_lone_devil/
 
-When the command is run, the term `[[user]]` is replaced by the user's name. The user's name is always given entirely in lowercase.
-
-#### `count`
-
-Another simple term is the term `[[count]]`, which is replaced by the number of times the command has been run.
-
-For example, take a command `!example` with the response `This command has been run [[count]] times`. If it has already been run 9 times, then the next time it is run, the response will be `This command has been run 10 times`.
-
-Though a modifier can be used with `[[count]]`, it has no effect because `[[count]]` is replaced by a number made up of digits, which do not have uppercase and lowercase versions.
-
-#### `args`
-
-
+<On Beam in MaddiieManeater's channel>
+[MaddiieManeater] !multi NthPortal The_Lone_Devil
+[OTB] Beam has not implemented their own multi-streams as of 2015/07/19. Sorry.
+```
 
 {% endraw %}
