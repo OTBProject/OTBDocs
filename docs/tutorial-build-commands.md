@@ -98,6 +98,7 @@ If a term expects more embedded strings than you've given it, it will treat any 
 ## Advanced Examples
 
 Multi-stream link based on service:
+
 ```
 [MaddiieManeater] !command set !multi [[equal{{[[service]]}}{{Twitch}}{{Watch [[foreach{{}}{{[[ifarg2{{, }}]]}}]] and me at the same time! example.com/multistream/[[channel]]/[[foreach.lower{{}}{{/}}]]}}{{Beam has not implemented their own multi-streams as of 2015/07/19. Sorry.}}]]
 [OTB] Set command '!multi'.
