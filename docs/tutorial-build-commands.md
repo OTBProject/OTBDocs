@@ -17,6 +17,7 @@ layout: markdown
 - [Modifiers](#modifiers)
 - [Embedded Strings](#embedded-strings)
 - [Terms](#terms)
+- [Other Notes](#other-notes)
 - [Advanced Examples](#advanced-examples)
 
 ## Version
@@ -95,6 +96,10 @@ If a term expects more embedded strings than you've given it, it will treat any 
 |`[[foreach{{prepend}}{{append}}]]`|For each argument provided, returns the first embedded string, the argument, and then the second embedded string. If a modifier is used, it is applied to each argument (but not to the embedded strings). Spaces are not added between arguments.<br><br>`[NthPortal] !command set !example Tags: [[foreach{{<}}{{>}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example one two three`<br>`[OTB] Tags: <one><two><three>`|
 |`[[equal{{string 1}}{{string 2}}{{if same}}{{if different}}]]`|If the first two embedded strings are the same, then it returns the third embedded string. If not, it returns the fourth embedded string.<br><br>`[NthPortal] !command set !example Hello? [[equal{{[[user]]}}{{maddiiemaneater}}{{Ohai Maddiie!}}{{You're not Maddiie D:}}]].`<br>`[OTB] Set command '!example'.`<br><br>`[NthPortal] !example`<br>`[OTB] Hello? You're not Maddiie D:`<br><br>`[MaddiieManeater] !example`<br>`[OTB] Hello? Ohai Maddiie!`|
 
+## Other Notes
+
+Some of the terms listed above may sometimes produce an empty response. For example, if `[[args]]` is used without a default value, and the command is not run with any arguments, then `[[args]]` will be replaced by an empty string. If the entire command is one or more terms which together produce empty string, then the bot will not send any response.
+
 ## Advanced Examples
 
 Multi-stream link based on service:
@@ -112,6 +117,18 @@ Multi-stream link based on service:
 <On Beam in MaddiieManeater's channel>
 [MaddiieManeater] !multi NthPortal The_Lone_Devil
 [OTB] Beam has not implemented their own multi-streams as of 2015/07/19. Sorry.
+```
+
+A command which only works for one person:
+
+```
+[NthPortal] !command set !example [[equal{{[[user]]}}{{maddiiemaneater}}{{Hi Maddiie!}}]]
+[OTB] Set command '!example'.
+
+[NthPortal] !example
+
+[MaddiieManeater] !example
+[OTB] Hi Maddiie!
 ```
 
 {% endraw %}
