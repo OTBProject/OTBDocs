@@ -98,7 +98,7 @@ If a term expects more embedded strings than you've given it, it will treat any 
 
 ## Other Notes
 
-Some of the terms listed above may sometimes produce an empty response. For example, if `[[args]]` is used without a default value, and the command is not run with any arguments, then `[[args]]` will be replaced by an empty string. If the entire command is one or more terms which together produce empty string, then the bot will not send any response.
+Some of the terms listed above may sometimes produce an empty response. For example, if `[[args]]` is used without a default value, and the command is not run with any arguments, then `[[args]]` will be replaced by an empty string. If the entire command is one or more terms which together produce an empty string, then the bot will not send any response.
 
 ## Advanced Examples
 
