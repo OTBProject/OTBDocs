@@ -34,12 +34,12 @@ The port number at the end of the URL will be whatever is specified in the <a hr
 
 #### The Same Network
 
-If you are trying to open the web interface from the local network you will want to navigate to <local IP Address of the server>:22222 (for example 192.168.1.2:22222) by default to view the whichever version the IP address of the machine you are on is allowed to see.
+If you are trying to open the web interface from the local network you will want to navigate to &lt;local IP Address of the server&gt;:22222 (for example 192.168.1.2:22222) by default to view the whichever version the IP address of the machine you are on is allowed to see.
 The port number at the end of the URL will be whatever is specified in the <a href="config-documentation.md#web-config" target="_blank">config</a>
 
 #### Over The Internet
 
-If you are trying to open the web interface from across the internet you will want to navigate to <public IP Address of the server>:22222 (for example 137.183.92.180:22222) by default to view the whichever version the public IP address of the machine you are on is allowed to see.
+If you are trying to open the web interface from across the internet you will want to navigate to &lt;public IP Address of the server&gt;:22222 (for example 137.183.92.180:22222) by default to view the whichever version the public IP address of the machine you are on is allowed to see.
 The port number at the end of the URL will be whatever is specified in the <a href="config-documentation.md#web-config" target="_blank">config</a>
 
 ## Read Only
