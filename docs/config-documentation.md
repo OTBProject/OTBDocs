@@ -85,10 +85,10 @@ The general configuration file can be found at:
 
 ```json
 {
-  "serviceName": "TWITCH",
-  "portNumber" : 80,
-  "ip_binding" : "0.0.0.0",
-  "permanently_enabled_commands" : [ "!bot-enable-meta" ]
+  "service" : "TWITCH",
+  "updateChecking" : true,
+  "deletingOldLogs" : true,
+  "permanentlyEnabledCommands" : [ "!leave", "!bot-enable-meta" ]
 }
 ```
 
@@ -97,9 +97,39 @@ The general configuration file can be found at:
 | Field | Description |
 |:-----------|:------------|
 |`serviceName`|The name of the service to connect to. Valid options are `"TWITCH"` AND `"BEAM"`.
-|`portNumber`|Not currently in use.|
-|`ip_binding`|Not currently in use.|
+|`updateChecking`|Not currently in use.|
+|`deletingOldLogs`|Not currently in use.|
 |`permanently_enabled_commands`|A list of commands which the bot will listen for even when it is disabled.|
+
+## Web Config
+
+### Path
+
+```
+.otbproject/config/web-config.json
+```
+
+### Sample Web Config
+
+```json
+{
+  "enabled" : true,
+  "autoUpdating" : true,
+  "portNumber" : 22222,
+  "ipBinding" : "0.0.0.0",
+  "whitelistedIPAddressesWithSubnettingPrefix" : [ "192.168.0.0/16", "10.0.0.0/8", "127.0.0.0/8", "172.16.0.0/12" ]
+}
+```
+
+### Fields
+
+| Field | Description |
+|:-----------|:------------|
+|`enabled`|Whether or not the web interface is enabled.
+|`autoUpdating`|Whether or not the web interface will automatically download new updates|
+|`portNumber`|The network port number that the web interface will listen on, anything from 1-65535 is valid|
+|`ipBinding`|The IP address that it wil bind to, Most people will want to leave this alone, this is only for experiecened system administrators|
+|`whitelistedIPAddressesWithSubnettingPrefix`| A list of IP addresses and subnetting prefixes to allow write control in the web interface. (if this does not make sense to you, then do not worry about it, just put the ip addresses of the people you want to allow in here, leaving the defaults in there as well)|
 
 ## Bot Config
 
