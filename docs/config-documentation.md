@@ -23,14 +23,18 @@ layout: markdown
 	- [Path](#path-1)
 	- [Sample File](#sample-general-configuration-file)
 	- [Fields](#fields-1)
-- [Bot Config](#bot-config)
+- [Web Config](#general-config)
 	- [Path](#path-2)
-	- [Sample File](#sample-bot-configuration-file)
+	- [Sample File](#sample-web-configuration-file)
 	- [Fields](#fields-2)
-- [Channel Config](#channel-config)
+- [Bot Config](#bot-config)
 	- [Path](#path-3)
-	- [Sample File](#sample-channel-configuration-file)
+	- [Sample File](#sample-bot-configuration-file)
 	- [Fields](#fields-3)
+- [Channel Config](#channel-config)
+	- [Path](#path-4)
+	- [Sample File](#sample-channel-configuration-file)
+	- [Fields](#fields-4)
 
 ## Version
 
