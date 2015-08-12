@@ -38,10 +38,10 @@ layout: markdown
 
 ## Version
 
-Version 0.2.0
+Version 0.3.0
 
 ### Changelog
-
+* 0.3.0 - Added web config
 * 0.2.0 - Changed field name for account. Added field to general config.
 * 0.1.0 - Account, general config, bot config, and channel config documentation added
 
