@@ -42,6 +42,10 @@ layout: markdown
   - [Disabling and Enabling Aliases](#disabling-and-enabling-aliases)
 - [Quotes](#quotes)
   - [Adding a Quote](#adding-a-quote)
+  - [Removing a Quote](#removing-a-quote)
+  - [Getting the ID of a Quote](#getting-the-id-of-a-quote)
+  - [Listing Quotes](#listing-quote)
+  - [Retrieving a Quote](#retrieving-a-quote)
 
 ## Version
 
