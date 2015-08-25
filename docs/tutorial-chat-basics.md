@@ -8,6 +8,7 @@ layout: markdown
 # OTB Project Documentation
 
 ### Tutorial: Chat Basics
+
 ##### Commands, Aliases, and Quotes
 
 ## Table of Contents
