@@ -31,7 +31,7 @@ layout: markdown
   - [Renaming Commands](#renaming-commands)
   - [Changing the Minimum User Level](#changing-the-minimum-user-level)
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
-  - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
+  - [Changing the Count of a Command](#changing-the-count-of-a-command)
   - [Listing Commands](#listing-commands)
   - [Getting the Raw Response of a Command](#getting-the-raw-response-of-a-command)
 - [Aliases](#aliases)
@@ -219,9 +219,29 @@ To change the user level required to run an existing command, you can use the co
 
 To change the minimum number of arguments for an existing command, you can use the command `!setMinArgs <command name> <min args>`, where `<min args>` is a whole number greater than or equal to 0, [as described earlier](#minimum-number-of-arguments-for-a-command).
 
-### Resetting the Count of a Command
+### Changing the Count of a Command
 
-The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!resetCount <command name>`.
+The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!count reset <command name>`.
+
+Another way of resetting the count of a command is:
+
+* `!resetCount <command name>`
+
+For reference, the alias used there is:
+
+* `!resetCount='!count reset'`
+
+If you want to manually set the count of a command (perhaps someone accidentally reset the count), you can do so with the command `!count set <count> <command name>`, where `<count>` is a non-negative integer.
+
+If the count is only slightly off (if you're using a command as a counter and someone accidentally ran the command twice), then you can increase the count by 1 with the command `!count increment <command name>`, or decrease it by 1 with the command `!count decrement <command name>`.
+
+Another way of incrementing the count of a command is:
+
+* `!count inc <command name>`
+
+Another way of decrementing the count of a command is:
+
+* `!count dec <command name>`
 
 ### Listing Commands
 
