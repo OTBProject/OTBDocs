@@ -245,7 +245,7 @@ Another way of decrementing the count of a command is:
 
 ### Listing Commands
 
-To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained later.)
+To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained elsewhere [missing link]().)
 
 Another way of listing commands is:
 
