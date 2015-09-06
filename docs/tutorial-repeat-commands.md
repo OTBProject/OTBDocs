@@ -12,12 +12,22 @@ layout: markdown
 ## Table of Contents
 
 - [Version](#version)
+- [Overview](#overview)
+- [Adding a Repeat](#adding-a-repeat)
+  - [Syntax](#syntax)
+  - [Flags](#flags)
+  - [Adding or Setting a Repeat](#adding-or-setting-a-repeat)
+  - [Hourly Reset](#hourly-reset)
+  - [No Reset](#no-reset)
+- [Removing a Repeat](#removing-a-repeat)
+- [Disabling a Repeat](#disabling-a-repeat)
+- [Listing Repeats](#listing-repeats)
 
 ## Version
 
 1.0
 
-## Introduction
+## Overview
 
 If you want to have a command repeat periodically (say, every 10 minutes), you can do so using the `!repeat` command.
 
@@ -32,10 +42,11 @@ To have multiple commands run repeatedly, but at different times, you have a few
  - You can have the repeat interval and offset be based on the beginning of each hour, rather than based on the time it is added. Then, with an interval of 10 minutes, an offset of 4 minutes, and starting at 10 o'clock, it will run at 10:04, 10:14, 10:24, etc., until it resets at the start of the next hour (11 o'clock).
    Disadvantage: intervals which are not even factors of 60 minutes (e.g. 13 minutes) may have their last interval of each hour shortened.
 
-## Syntax for Adding Repeats
+## Adding a Repeat
+
+### Syntax
 
 The basic command to have a command repeat periodically is `!repeat <subcommand> <flags> <interval> <offset> <command>`. (Example: `!repeat add --seconds --no-reset 450 300 !example-command with arguments`.)
-
 
  - `<subcommand>` can be `add`, `new`, `set`, or `edit`; see [below](#adding-or-setting-a-repeat)
  - `<flags>` are optional and change whether or not the repeat resets hourly, and what time units are used; they will be discussed [shortly](#flags)
@@ -43,7 +54,7 @@ The basic command to have a command repeat periodically is `!repeat <subcommand>
  - `<offset>` is a non-negative integer specifying the offset (from the beginning of each hour or from when the repeat is added; see [here](#hourly-reset) and [here](#no-reset)) before the command is run the first time
  - `<command>` is the command to be repeated, with or without accompanying arguments (it may contain spaces)
 
-#### Flags
+### Flags
 
 Flags are optional, and their order is not significant. All flags begin with `--`.
 
@@ -55,7 +66,7 @@ For the remainder of this tutorial, it is assumed that `<interval>` and `<offset
 
 (`--reset` and `--minutes` are not strictly needed, but are valid flags for reasons of consistency, and may also potentially be used make the behaviour of the command more obvious.)
 
-#### Adding or Setting a Repeat
+### Adding or Setting a Repeat
 
 To add a repeated command only if that command (with the same arguments) is not already set to repeat, use one of the following commands:
 
@@ -67,7 +78,7 @@ To set a repeated command even if that command (with the same arguments) is alre
  - `!repeat set <flags> <interval> <offset> <command>`
  - `!repeat edit <flags> <interval> <offset> <command>`
 
-#### Hourly Reset
+### Hourly Reset
 
 If a repeat is made to reset every hour, then the offset is from the beginning of each hour. That means, starting `<offset>` minutes after the beginning of each hour, the command will be run every `<interval>` minutes.
 
@@ -75,7 +86,7 @@ For example, suppose a repeat is added with an offset of 5 minutes and an interv
 
 Both of the previous examples had 10 minute intervals, which is an interval length which evenly divides an hour. An interval length which does not evenly divide an hour, however, may have its final interval of each hour cut short. For example, suppose a repeat is added with an offset of 0 minutes and an interval of 13 minutes. It will run at `:00`, `:13`, `:26`, `:39` and `:52` of each hour. The final interval of the hour is only 8 minutes (rather than 13), as it will be run at `:00` of the following hour.
 
-#### No Reset
+### No Reset
 
 ## Removing a Repeat
 
