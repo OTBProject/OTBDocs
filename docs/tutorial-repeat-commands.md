@@ -84,7 +84,7 @@ If a repeat is made to reset every hour, then the offset is from the beginning o
 
 For example, suppose a repeat is added with an offset of 5 minutes and an interval of 10 minutes. It will run at `:05`, `:15`, `:25`, `:35`, `:45` and `:55` of each hour (for 10 o'clock, `:05` is `10:05`). However, a repeat with an offset of 0 minutes and an interval of 10 minutes will run at `:00`, `:10`, `:20`, `:30`, `:40` and `:50` of each hour.
 
-Both of the previous examples had 10 minute intervals, which is an interval length which evenly divides an hour. An interval length which does not evenly divide an hour, however, may have its final interval of each hour cut short. For example, suppose a repeat is added with an offset of 0 minutes and an interval of 13 minutes. It will run at `:00`, `:13`, `:26`, `:39` and `:52` of each hour. The final interval of the hour is only 8 minutes (rather than 13), as it will be run at `:00` of the following hour.
+Both of the previous examples had 10 minute intervals - an interval length which evenly divides an hour. An interval length which does not evenly divide an hour, however, may have its final interval of each hour cut short. For example, suppose a repeat is added with an offset of 0 minutes and an interval of 13 minutes. It will run at `:00`, `:13`, `:26`, `:39` and `:52` of each hour. The final interval of the hour is only 8 minutes (rather than 13), as it will be run at `:00` of the following hour.
 
 ### No Reset
 
