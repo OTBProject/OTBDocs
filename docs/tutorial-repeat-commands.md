@@ -59,7 +59,7 @@ To add a repeated command only if that command (with the same arguments) is not 
  - `!repeat add <flags> <interval> <offset> <command>`
  - `!repeat new <flags> <interval> <offset> <command>`
 
-To set a repeated command even if that command (with the same arguments) is already set to repeat (and overwrite the previous settings if it is), use one of the following commands:
+To set a repeated command even if that command (with the same arguments) is already set to repeat (and overwrite the previous interval and offset if it is), use one of the following commands:
 
  - `!repeat set <flags> <interval> <offset> <command>`
  - `!repeat edit <flags> <interval> <offset> <command>`
