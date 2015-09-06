@@ -34,7 +34,7 @@ To have multiple commands run repeatedly, but at different times, you have a few
 
 ## Syntax for Adding Repeats
 
-The basic command to have a command repeat periodically is `!repeat <subcommand> <flags> <interval> <offset> <command>`. (Example: `!repeat add --no-reset 10 5 !example-command with arguments`.)
+The basic command to have a command repeat periodically is `!repeat <subcommand> <flags> <interval> <offset> <command>`. (Example: `!repeat add --seconds --no-reset 450 300 !example-command with arguments`.)
 
 
  - `<subcommand>` can be `add`, `new`, `set`, or `edit`; see [below](#adding-or-setting-a-repeat)
