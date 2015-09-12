@@ -15,6 +15,8 @@ layout: markdown
    - [Starting Out](#starting-out)
    - [Finding Your Installation Directory](#finding-your-installation-directory)
    - [Setting Your Account Information](#setting-your-account-information)
+   - [Starting the Bot](#starting-the-bot)
+   - [Joining Channels](#joining-channels)
    - [Changing the Channel Join Setting](#changing-the-channel-join-setting)
      - [Running Chat Commands](#running-chat-commands)
      - [Modifying the Configuration File](#modifying-the-configuration-file)
@@ -34,7 +36,7 @@ Before being able to modify configurations or other data for the bot, you need t
 
 ### Finding Your Installation Directory
 
-After running the bot once, it will have set up a directory to store data for the bot. You can open this directory by selecting `File > Open Installation Directory`.
+After running the bot once, it will have set up a directory to store data for the bot. You can open this directory by selecting the menu option `File > Open Installation Directory`.
 
 After this point, all paths will be denoted with reference to the `.otbproject` installation directory. It is assumed that you have already determined that directory's location.
 
@@ -45,6 +47,12 @@ To set your account information, you need to modify the account configuration fi
 ### Changing the Service
 
 If you want the bot to connect to Beam, you need to modify the general configuration file, which you can find at `.otbproject/config/general-config.json`. In that file, set the `serviceName` to `"BEAM"`, and save the file. See the [config documentation](config-documentation.html#general-config) for more inforation about changing which service is used.
+
+### Starting the Bot
+
+At this point, the bot is ready to be started. You can start it by selecting the menu option `Bot > Start`, or by typing `start` into the command input box in the bottom right of the window and then hitting `[enter]`.
+
+### Joining Channels
 
 ### Changing the Channel Join Setting
 
