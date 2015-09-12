@@ -52,7 +52,7 @@ The basic command to have a command repeat periodically is `!repeat <subcommand>
  - `<flags>` are optional and change whether or not the repeat resets hourly, and what time units are used; they will be discussed [shortly](#flags).
  - `<interval>` is a non-negative integer specifying the amount of time between each execution of the command.
  - `<offset>` is a non-negative integer specifying the offset (from the beginning of each hour or from when the repeat is added; see [here](#hourly-reset) and [here](#no-reset)) before the command is run the first time. It can be larger than `<interval>`, although it usually will not be.
- - `<command>` is the command to be repeated, with or without accompanying arguments (it may contain spaces).
+ - `<command>` is the command to be repeated, with or without accompanying arguments (it may contain spaces). It may be an alias as well.
 
 ### Flags
 
@@ -90,8 +90,18 @@ Both of the previous examples had 10 minute intervals - an interval length which
 
 ## Removing a Repeat
 
+To remove a repeat, use the command `!repeat remove <command>`. `<command>` must be the full command as you added it, including arguments. You can also use one of the following commands:
+
+- `!repeat delete <command>`
+- `!repeat rm <command>`
+- `!repeat del <command>`
+
 ## Disabling a Repeat
 
+Though it is not possible to disable a repeat itself, disabling the command (or alias) which is set to repeat will prevent anything from happening when it is run.
+
 ## Listing Repeats
+
+You can list all the repeated commands using `!repeat list`.
 
 {% endraw %}
