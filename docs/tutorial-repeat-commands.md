@@ -88,6 +88,8 @@ Both of the previous examples had 10 minute intervals - an interval length which
 
 ### No Reset
 
+If a repeat is not made to reset every hour, then the offset is from the time it is added, or from when the bot rejoins the channel (if it restarts or leaves). That means, starting `<offset>` minutes after the repeat is added (or after the bot rejoins the channel), the command will be run every `<interval>` minutes.
+
 ## Removing a Repeat
 
 To remove a repeat, use the command `!repeat remove <command>`. `<command>` must be the full command as you added it, including arguments. You can also use one of the following commands:
