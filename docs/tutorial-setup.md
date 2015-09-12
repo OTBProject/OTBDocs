@@ -52,7 +52,7 @@ By default, the bot will join the channels of anyone who runs the `!join` comman
 
 #### Running Chat Commands
 
-In order to run the configuration commands in the bot's channel, you must be logged in using the bot's account, or some other account which has been assigned a [user level](tutorial-user-levels.html) of super-moderator. For more information about assigning user levels, see the [chat documentation](chat-documentation.html#built-in-channel-commands).
+In order to run the configuration commands in the bot's channel, you must be logged in using the bot's account, or some other account which has been assigned a [user level](reference-user-levels.html) of super-moderator. For more information about assigning user levels, see the [chat documentation](chat-documentation.html#built-in-channel-commands).
 
 To set the channel join mode to use a whitelist, run the command `!joinMode whitelist` in the bot's channel.
 
