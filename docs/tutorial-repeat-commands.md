@@ -51,7 +51,7 @@ The basic command to have a command repeat periodically is `!repeat <subcommand>
  - `<subcommand>` can be `add`, `new`, `set`, or `edit`; see [below](#adding-or-setting-a-repeat).
  - `<flags>` are optional and change whether or not the repeat resets hourly, and what time units are used; they will be discussed [shortly](#flags).
  - `<interval>` is a non-negative integer specifying the amount of time between each execution of the command.
- - `<offset>` is a non-negative integer specifying the offset (from the beginning of each hour or from when the repeat is added; see [here](#hourly-reset) and [here](#no-reset)) before the command is run the first time. It can be larger than `<interval>`, although it usually will not be.
+ - `<offset>` is a non-negative integer specifying the offset (from the beginning of each hour or from when the repeat is added; see [here](#hourly-reset) and [here](#no-reset)) before the command is run the first time. It can be larger than `<interval>`, although it usually will not be. A value of `0` means no offset.
  - `<command>` is the command to be repeated, with or without accompanying arguments (it may contain spaces). It may be an alias as well.
 
 ### Flags
