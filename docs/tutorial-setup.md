@@ -30,13 +30,13 @@ Corresponds to release 1.1.x
 
 ### Starting Out
 
-Before being able to modify configurations or other data for the bot, you need to run it once so that it can set up all the files it needs. It will not actually connect to Twitch or Beam however, because it does not have your account information, so you can stop the bot after the window pops up. It may take several seconds for the window to pop up the first time you run the bot.
+Before being able to modify configurations or other data for the bot, you need to run it once so that it can set up all the files it needs. It will not actually connect to Twitch or Beam however, because it does not have your account information.
 
 ### Finding Your Installation Directory
 
-After running the bot once, it will have set up a directory to store data for the bot. The default installation directory is a folder called `.otbproject` in your home directory. On Windows, you can find your default installation directory by typing `%USERPROFILE%\.otbproject` into the address bar of Windows Explorer (which is the file explorer, and is not the same as Internet Explorer). I assume that if you are on Mac or Linux, you know where your home directory is.
+After running the bot once, it will have set up a directory to store data for the bot. You can open this directory by selecting `File > Open Installation Directory`.
 
-After this point, all paths will be denoted within the `.otbproject` installation directory, and it is assumed that you have already determined that directory's location.
+After this point, all paths will be denoted with reference to the `.otbproject` installation directory. It is assumed that you have already determined that directory's location.
 
 ### Setting Your Account Information
 
@@ -44,7 +44,7 @@ To set your account information, you need to modify the account configuration fi
 
 ### Changing the Service
 
-If you want the bot to connect to Beam, you need to modify the general configuration file, which you can find at `.otbproject/config/general-config.json`. In that file, set the `serviceName` to `"BEAM"`, and save the file. Preferably, this should be done while the bot is not running. See the [config documentation](config-documentation.html#general-config) for more inforation about changing which service is used.
+If you want the bot to connect to Beam, you need to modify the general configuration file, which you can find at `.otbproject/config/general-config.json`. In that file, set the `serviceName` to `"BEAM"`, and save the file. See the [config documentation](config-documentation.html#general-config) for more inforation about changing which service is used.
 
 ### Changing the Channel Join Setting
 
