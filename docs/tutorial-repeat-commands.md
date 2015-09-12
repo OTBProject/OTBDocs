@@ -58,9 +58,9 @@ The basic command to have a command repeat periodically is `!repeat <subcommand>
 
 Flags are optional, and their order is not significant. All flags begin with `--`.
 
-By default, a repeat will [reset hourly](#hourly-reset). If you [do not wish](#no-reset) it to do so, you can use the flag `--no-reset`. The flag `--reset` will make it reset hourly (which it would have anyway, since that is the default behaviour), but is not needed. `--reset` and `--no-reset` are mutually exclusive (cannot both be used in the same command).
+By default, a repeat will [reset hourly](#hourly-reset). If you [do not wish](#no-reset) it to do so, you can use the flag `--no-reset`. The flag `--reset` will make it reset hourly (which it would have anyway, since that is the default behaviour), but is not needed. The flags `--reset` and `--no-reset` are mutually exclusive (cannot both be used in the same command).
 
-By default, the values given for `<interval>` and `<offset>` are evaluated in minutes. The flags `--seconds` and `--hours` can be used to instead evaluate both `<interval>` and `<offset>` in seconds or hours, respectively. The flag `--minutes` will make those values be evaluated in minutes (which they would have been anyway, since that is the default behaviour), but is not needed. `--seconds`, `--minutes`, and `--hours` are mutually exclusive.
+By default, the values given for `<interval>` and `<offset>` are evaluated in minutes. The flags `--seconds` and `--hours` can be used to instead evaluate both `<interval>` and `<offset>` in seconds or hours, respectively. The flag `--minutes` will make those values be evaluated in minutes (which they would have been anyway, since that is the default behaviour), but is not needed. The flags `--seconds`, `--minutes`, and `--hours` are mutually exclusive.
 
 For the remainder of this tutorial, it is assumed that `<interval>` and `<offset>` are in minutes unless otherwise noted.
 
