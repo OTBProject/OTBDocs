@@ -17,16 +17,15 @@ layout: markdown
    - [Setting Your Account Information](#setting-your-account-information)
    - [Starting the Bot](#starting-the-bot)
    - [Joining Channels](#joining-channels)
-   - [Changing the Channel Join Setting](#changing-the-channel-join-setting)
-     - [Running Chat Commands](#running-chat-commands)
-     - [Modifying the Configuration File](#modifying-the-configuration-file)
+     - [Adding a Channel to the Whitelist](#adding-a-channel-to-the-whitelist)
+     - [Changing the Channel Join Setting](#changing-the-channel-join-setting)
    - [Wrapping Up](#wrapping-up)
    - [Other Notes](#other-notes)
 
 ## Version
-Version 2.1
+Version 3.0
 
-Corresponds to release 1.1.x
+Corresponds to release 2.0.0 +
 
 ## Tutorial
 
@@ -38,7 +37,7 @@ Before being able to modify configurations or other data for the bot, you need t
 
 After running the bot once, it will have set up a directory to store data for the bot. You can open this directory by selecting the menu option `File > Open Installation Directory`.
 
-After this point, all paths will be denoted with reference to the `.otbproject` installation directory. It is assumed that you have already determined that directory's location.
+After this point, all paths will be denoted with reference to the `.otbproject` installation directory.
 
 ### Setting Your Account Information
 
@@ -50,33 +49,25 @@ If you want the bot to connect to Beam, you need to modify the general configura
 
 ### Starting the Bot
 
-At this point, the bot is ready to be started. You can start it by selecting the menu option `Bot > Start`, or by typing `start` into the command input box in the bottom right of the window and then hitting `[enter]`.
+At this point, the bot is ready to be started. You can start it by selecting the menu option `Bot > Start`, or by typing `start` into the command input box in the bottom right of the window and then pressing the `Enter` key.
 
 ### Joining Channels
 
-### Changing the Channel Join Setting
+By default, the bot will only join channels specified in a whitelist.
 
-By default, the bot will join the channels of anyone who runs the `!join` command in the bot's channel. For a number of reasons, you may not want anyone to be able to use your bot. You can use a whitelist to decide which channels the bot can join by running commands in the bot's channel, or by modifying the bot configuration file.
+#### Adding a Channel to the Whitelist
 
-#### Running Chat Commands
+If you type `join <channel name>` into the command input box, it will join the channel and automatically add the channel to the whitelist.
+
+A user can also have the bot join their channel by running the `!join` command in the bot's channel.
+
+#### Changing the Channel Join Setting
 
 In order to run the configuration commands in the bot's channel, you must be logged in using the bot's account, or some other account which has been assigned a [user level](reference-user-levels.html) of super-moderator. For more information about assigning user levels, see the [chat documentation](chat-documentation.html#built-in-channel-commands).
 
 To set the channel join mode to use a whitelist, run the command `!joinMode whitelist` in the bot's channel.
 
 You can add channels to the whitelist using the command `!whitelist add <channel name>` (where `<channel name>` is the name of a channel), and remove channels from the whitelist using the command `!whitelist remove <channel name>`. The command `!whitelist list` will list the channels currently on the whitelist. More information about bot channel commands can be found in the [chat documentation](chat-documentation.html#built-in-bot-channel-commands).
-
-#### Modifying the Configuration File
-
-The bot configuration file can be found at `.otbproject/data/bot-channel/bot-config.json`. Change the `channelJoinSetting` from `"NONE"` to `"WHITELIST"`. Add any channels you want to be whitelisted inside the brackets in the `whitelist` field as a comma separated list. The channel names must be in quotes.
-
-For example, the whitelist might look like the following:
-
-```json
-...
-"whitelist" : [ "channel1", "channel2", "some_other_channel" ],
-...
-```
 
 ### Wrapping Up
 
