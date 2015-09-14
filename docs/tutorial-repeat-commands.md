@@ -62,18 +62,18 @@ By default, a repeat will [reset hourly](#hourly-reset). If you [do not wish](#n
 
 By default, the values given for `<interval>` and `<offset>` are evaluated in minutes. The flags `--seconds` and `--hours` can be used to instead evaluate both `<interval>` and `<offset>` in seconds or hours, respectively. The flag `--minutes` will make those values be evaluated in minutes (which they would have been anyway, since that is the default behaviour), but is not needed. The flags `--seconds`, `--minutes`, and `--hours` are mutually exclusive.
 
-For the remainder of this tutorial, it is assumed that `<interval>` and `<offset>` are in minutes unless otherwise noted.
+*Note: `--reset` and `--minutes` are not strictly needed, but are valid flags for reasons of consistency, and may also potentially be used make the behaviour of the command more obvious.*
 
-(`--reset` and `--minutes` are not strictly needed, but are valid flags for reasons of consistency, and may also potentially be used make the behaviour of the command more obvious.)
+For the remainder of this tutorial, it is assumed that `<interval>` and `<offset>` are in minutes unless otherwise noted.
 
 ### Adding or Setting a Repeat
 
-To add a repeated command only if that command (with the same arguments) is not already set to repeat, use one of the following commands:
+To add a new repeated command, use one of the following commands *(Note: this doesn't work if that command with the same arguments is already set to repeat)*:
 
  - `!repeat add <flags> <interval> <offset> <command>`
  - `!repeat new <flags> <interval> <offset> <command>`
 
-To set a repeated command even if that command (with the same arguments) is already set to repeat (and overwrite the previous interval and offset if it is), use one of the following commands:
+To set a repeated command even if that command (with the same arguments) is already set to repeat, use one of the following commands *(Note: if it is already set to repeat, this will overwrite the previous interval and offset)*:
 
  - `!repeat set <flags> <interval> <offset> <command>`
  - `!repeat edit <flags> <interval> <offset> <command>`
