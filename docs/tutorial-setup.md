@@ -17,8 +17,8 @@ layout: markdown
    - [Setting Your Account Information](#setting-your-account-information)
    - [Starting the Bot](#starting-the-bot)
    - [Joining Channels](#joining-channels)
-     - [Adding a Channel to the Whitelist](#adding-a-channel-to-the-whitelist)
-     - [Changing the Channel Join Setting](#changing-the-channel-join-setting)
+     - [Using Console Commands](#using-console-commands)
+     - [Joining From Chat](#joining-from-chat)
    - [Wrapping Up](#wrapping-up)
    - [Other Notes](#other-notes)
 
@@ -55,19 +55,19 @@ At this point, the bot is ready to be started. You can start it by selecting the
 
 By default, the bot will only join channels specified in a whitelist.
 
-#### Adding a Channel to the Whitelist
+#### Using Console Commands
 
 If you type `join <channel name>` into the command input box, it will join the channel and automatically add the channel to the whitelist.
 
-A user can also have the bot join their channel by running the `!join` command in the bot's channel.
+#### Joining from Chat
 
-#### Changing the Channel Join Setting
+A user can also have the bot join their channel by running the `!join` command in the bot's channel, as long as their channel has already been added to the whitelist.
 
-In order to run the configuration commands in the bot's channel, you must be logged in using the bot's account, or some other account which has been assigned a [user level](reference-user-levels.html) of super-moderator. For more information about assigning user levels, see the [chat documentation](chat-documentation.html#built-in-channel-commands).
+In order to run the configuration commands in the bot's channel, you must be logged in using the bot's account, or some other account which has been assigned a [user level](reference-user-levels.html) of super-moderator in the bot's channel. For more information about assigning user levels, see the [chat documentation](chat-documentation.html#built-in-channel-commands).
 
-To set the channel join mode to use a whitelist, run the command `!joinMode whitelist` in the bot's channel.
+You can add channels to the whitelist using the command `!whitelist add <channel name>` (where `<channel name>` is the name of a channel), and remove channels from the whitelist using the command `!whitelist remove <channel name>`. The command `!whitelist list` will list the channels currently on the whitelist. All of these commands must be run in the bot's channel by a user as described above. More information about bot channel commands can be found in the [chat documentation](chat-documentation.html#built-in-bot-channel-commands).
 
-You can add channels to the whitelist using the command `!whitelist add <channel name>` (where `<channel name>` is the name of a channel), and remove channels from the whitelist using the command `!whitelist remove <channel name>`. The command `!whitelist list` will list the channels currently on the whitelist. More information about bot channel commands can be found in the [chat documentation](chat-documentation.html#built-in-bot-channel-commands).
+To set the channel join mode to use a whitelist, blacklist, or have no join restrictions, run the commands `!joinMode whitelist`, `!joinMode blacklist`, `!joinMode none` respectively in the bot's channel.
 
 ### Wrapping Up
 
