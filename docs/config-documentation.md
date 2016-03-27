@@ -1,6 +1,7 @@
 ---
 title: Config Documentation
 layout: markdown
+permalink: /docs/docs/config-documentation/
 ---
 
 {% raw %}

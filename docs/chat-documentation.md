@@ -1,6 +1,7 @@
 ---
 title: Chat Documentation
 layout: markdown
+permalink: /docs/docs/chat-documentation/
 ---
 
 {% raw %}

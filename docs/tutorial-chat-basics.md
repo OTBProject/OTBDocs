@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Chat Basics
 layout: markdown
+permalink: /docs/docs/chat-guide/
 ---
 
 {% raw %}

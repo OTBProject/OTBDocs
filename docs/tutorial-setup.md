@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Setup
 layout: markdown
+permalink: /docs/docs/tutorial/
 ---
 
 {% raw %}
