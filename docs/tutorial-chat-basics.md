@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Chat
+title: Tutorial - Chat Basics
 layout: markdown
 ---
 
@@ -7,7 +7,9 @@ layout: markdown
 
 # OTB Project Documentation
 
-### Tutorial: How to Make the Bot Do Things
+### Tutorial: Chat Basics
+
+##### Commands, Aliases, and Quotes
 
 ## Table of Contents
 
@@ -29,7 +31,7 @@ layout: markdown
   - [Renaming Commands](#renaming-commands)
   - [Changing the Minimum User Level](#changing-the-minimum-user-level)
   - [Changing the Minimum Number of Arguments](#changing-the-minimum-number-of-arguments)
-  - [Resetting the Count of a Command](#resetting-the-count-of-a-command)
+  - [Changing the Count of a Command](#changing-the-count-of-a-command)
   - [Listing Commands](#listing-commands)
   - [Getting the Raw Response of a Command](#getting-the-raw-response-of-a-command)
 - [Aliases](#aliases)
@@ -38,17 +40,25 @@ layout: markdown
   - [Listing Aliases](#listing-aliases)
   - [Getting the Command an Alias is Aliased to](#getting-the-command-an-alias-is-aliased-to)
   - [Disabling and Enabling Aliases](#disabling-and-enabling-aliases)
+- [Quotes](#quotes)
+  - [Adding a Quote](#adding-a-quote)
+  - [Removing a Quote](#removing-a-quote)
+  - [Getting the ID of a Quote](#getting-the-id-of-a-quote)
+  - [Listing Quotes](#listing-quote)
+  - [Retrieving a Quote](#retrieving-a-quote)
 
 ## Version
 
-Version 1.0 [WIP]
+Version 1.0
 
 ### Changelog
+
 * 1.0
+  * Created tutorial
 
 ## Notes
 
-This tutorial is still a work in progress, so it should not be considered a comprehensive description of everything the bot can do.
+For other tutorials, see the [Tutorial Table of Contents](tutorial-toc.html).
 
 If you have any questions or if anything in this tutorial is unclear, please leave a question in the <a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issue Tracker</a>, or [contact us](../../contact).
 
@@ -82,6 +92,8 @@ There are two ways to add a command: you can add the new command only if it does
 
 The basic way of adding a command is `!command add <command name> <response>`. For example, suppose you want to add a command `!example`, for which the response is `This is an example command`. You would type `!command add !example This is an example command` in chat, and the bot would add the new command `!example`. As mentioned previously, `<command name>` cannot contain any spaces.
 
+Subcommands such as `add` (in `!command add`), and those mentioned later (for commands, aliases, and quotes) are not case sensitive; that is, `!command ADD` is equaly valid. Casing for subcommands in this tutorial is used purely for clarity.
+
 Other ways of adding a command (some of which you may be familiar with from other bots) are:
 
 * `!command new <command name> <response>`
@@ -114,7 +126,7 @@ For reference, the aliases used there are:
 
 ### Restrictions on Commands (and How to Use Flags)
 
-You may be wondering at this point how you can make it so that only a moderator can run a command. Or maybe also subscribers? I will discuss how asign a minimum user level to run a command here, though descriptions of all of the user levels will come a bit later.
+You may be wondering at this point how you can make it so that only a moderator can run a command. Or maybe also subscribers? I will discuss how asign a minimum user level to run a command here; you can find more information about user levels and their descriptions [here](reference-user-levels.html).
 
 There are two ways in which you can restrict how a command is run, and both are specified using flags in the `!command add` or `!command set` commands (or in any equivalent commands such as `!setcom`).
 
@@ -124,16 +136,16 @@ What's a flag? A flag is something you add to the command in order to specify mo
 
 The flag to assign a minimum user level for a command is `--ul=<user level>` (`ul` for "user level"). For example, suppose you only want moderators (or people with a higher user level) to be able to run your `!example` command. You could add it by typing `!command add --ul=mod !example This is an example command` in chat.
 
-The following is a list of valid markers which can be used with the `--ul=<user level>` flag in place of `<user level>`. If you are confused as to what some of the user levels listed are, don't worry; they will be explained later.
+The following is a list of valid markers which can be used with the `--ul=<user level>` flag in place of `<user level>`. If you are confused as to what some of the user levels listed are, see the [tutorial about user levels](reference-user-levels.html).
 
 | User Level | Markers |
 |:-----------|:----------|
-|Default|`default | def | none | any | all`|
-|Subscriber|`subscriber | sub`|
-|Regular|`regular | reg`|
-|Moderator|`moderator | mod`|
-|Super Moderator|`super-moderator | super_moderator | smod | sm`|
-|Broadcaster|`broadcaster | bc`|
+|[Default](reference-user-levels.html#default)|`default | def | none | any | all`|
+|[Subscriber](reference-user-levels.html#subscriber)|`subscriber | sub`|
+|[Regular](reference-user-levels.html#regular)|`regular | reg`|
+|[Moderator](reference-user-levels.html#moderator)|`moderator | mod`|
+|[Super-moderator](reference-user-levels.html#super-moderator)|`super-moderator | super_moderator | smod | sm`|
+|[Broadcaster](reference-user-levels.html#broadcaster)|`broadcaster | bc`|
 
 #### Minimum Number of Arguments for a Command
 
@@ -207,13 +219,33 @@ To change the user level required to run an existing command, you can use the co
 
 To change the minimum number of arguments for an existing command, you can use the command `!setMinArgs <command name> <min args>`, where `<min args>` is a whole number greater than or equal to 0, [as described earlier](#minimum-number-of-arguments-for-a-command).
 
-### Resetting the Count of a Command
+### Changing the Count of a Command
 
-The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!resetCount <command name>`.
+The bot stores the number of times each command has been run. While changing the response of the command with `!command set` resets that count to 0, you can also reset it by running the command `!count reset <command name>`.
+
+Another way of resetting the count of a command is:
+
+* `!resetCount <command name>`
+
+For reference, the alias used there is:
+
+* `!resetCount='!count reset'`
+
+If you want to manually set the count of a command (perhaps someone accidentally reset the count), you can do so with the command `!count set <count> <command name>`, where `<count>` is a non-negative integer.
+
+If the count is only slightly off (if you're using a command as a counter and someone accidentally ran the command twice), then you can increase the count by 1 with the command `!count increment <command name>`, or decrease it by 1 with the command `!count decrement <command name>`.
+
+Another way of incrementing the count of a command is:
+
+* `!count inc <command name>`
+
+Another way of decrementing the count of a command is:
+
+* `!count dec <command name>`
 
 ### Listing Commands
 
-To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained later.)
+To list all commands you can run the command `!command list`. (There is a type of command which will not be listed, but you do not need to worry about it. It will be explained elsewhere [missing link]().)
 
 Another way of listing commands is:
 
@@ -293,5 +325,81 @@ For example, if you run the command `!alias-meta getCommand !addcom`, the bot wi
 To disable an alias without deleting it, use the command `!alias-meta disable <alias name>`. The alias will then be ignored if it is used.
 
 To enable an alias again, use the command `!alias-meta enable <alias name>`.
+
+## Quotes
+
+If someone says something funny or memorable on stream or in chat, the bot can store it as a quote, so it can be retrieved and printed later in chat. Quotes can be retrieved either randomly or by an ID number, as will be explained shortly.
+
+The main command for adding and removing quotes is `!quote`; however, `!quotes` is aliased to `!quote` (that is, `!quotes='!quote'`).
+
+### Adding a Quote
+
+To add a quote, use the command `!quote add <quote>`. `<quote>` may contain spaces, and may be as long or short as you wish, as long as a quote with the exact same text does not already exist.
+
+Each new quote is given a numeric ID number (in roughly sequential order).
+
+Other ways of adding a quote are:
+
+* `!quote new <quote>`
+* `!quotes add <quote>`
+* `!quotes new <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
+### Removing a Quote
+
+To remove a quote, use the command `!quote remove <id>`, where `<id>` is the ID number of the quote. (This will leave a gap in the sequential order of quote IDs, which will be filled when another quote is added.)
+
+If you do not know the ID of a quote, see the following section: [Getting the ID of a Quote](#getting-the-id-of-a-quote).
+
+Other ways of removing a quote are:
+
+* `!quote delete <quote>`
+* `!quote del <quote>`
+* `!quote rm <quote>`
+* `!quotes remove <quote>`
+* `!quotes delete <quote>`
+* `!quotes del <quote>`
+* `!quotes rm <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
+### Getting the ID of a Quote
+
+If you know the full text of a quote, you can use the command `!quote getID <quote>` (where `<quote>` is the full text of the quote) to get the ID of the quote.
+
+Another way of getting the ID of a quote is:
+
+* `!quotes getID <quote>`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
+### Listing Quotes
+
+To list the IDs of all quotes, use the command `!quote list`.
+
+Other ways of listing quote IDs are:
+
+* `!quote listIDs`
+* `!quote IDs`
+* `!quotes list`
+* `!quotes listIDs`
+* `!quotes IDs`
+
+For reference, the alias used there is:
+
+* `!quotes='!quote'`
+
+### Retrieving a Quote
+
+To have the bot print a random quote, use the command `!getQuote`. To have the bot print a specific quote, use the command `!getquote <id>`, where `<id>` is the ID number of the quote.
+
+There is also a special term which can be used in the text of commands to retrieve a random or specific quote, which is discussed in the [tutorial about building commands]() (not yet written).
 
 {% endraw %}
