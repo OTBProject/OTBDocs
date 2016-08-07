@@ -80,7 +80,10 @@ Each channel by default has script commands to add and remove commands and alias
 |`!setExecUL`||`<command>` `<user level>`|Sets the minimum user level required to execute the specified command.|Moderator|
 |`!setMinArgs`||`<command>` `<min args>`|Sets the minimum number of arguments with which a command must be run. Cannot be negative.|Moderator|
 |`!rename`||`<old command name>` `<new command name>`|Renames a command. A command with the new name cannot already exist.|Moderator|
-|`!resetCount`||`<command>`|Resets the count of the specified command to 0.|Moderator|
+|`!count` `reset`||`<command>`|Resets the count of the specified command to 0.|Moderator|
+|`!count` `inc | increment`||`<command>`|Increments the count of the specified command by 1.|Moderator|
+|`!count` `dec | decrement`||`<command>`|Decrements the count of the specified command by 1.|Moderator|
+|`!count` `set`||`<command> <count>`|Sets the count of the specified command to the specified count.|Moderator|
 |`!assignUserLevel`||`<user>` `<user level>`|Assigns the specified user level to the specified user.|Broadcaster|
 |`!silence-meta` `on | true`|||Silences the bot in the channel. Commands which run scripts will still execute the scripts, but no responses will be printed in chat.|Super-moderator|
 |`!silence-meta` `off | false`|||Unsilences the bot in the channel. Responses will be printed again.|Super-moderator|
@@ -91,6 +94,7 @@ Each channel by default has script commands to add and remove commands and alias
 |`!quote` `remove | delete | del | rm`||`<quote id>`|Removes the quote with the specified ID, if it exists.|Moderator|
 |`!quote` `list | listids | ids`|||Lists the IDs of all quotes.|Moderator|
 |`!quote` `getid`||`<quote text>`|Prints the ID of the quote with the given text, if it exists.|Moderator|
+
 
 Additionally, there is also a `!getQuote` command which does not run a script. The special terms used in the response are explained later.
 
